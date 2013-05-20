@@ -6,8 +6,27 @@
 //  Copyright (c) 2013 BankBox. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class CWPrinters;
+@protocol CWAddPrinterViewControllerDelegate <NSObject>
 
-@interface CWAddPrinterViewController : UIViewController
+- (void)addPrinterToListPrinters:(CWPrinters *)printer;
+
+@end
+
+#import <UIKit/UIKit.h>
+#import "CWPrinterListViewController.h"
+#import "CWPrinters.h"
+
+@interface CWAddPrinterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+{
+    __weak IBOutlet UILabel *brandSelectedLabel;
+    __weak IBOutlet UITextField *nameTextField;
+    __weak IBOutlet UITextField *modelTextField;
+}
+- (IBAction)addPrinterBtn:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (strong, nonatomic) NSMutableArray *myPrintersArray;
+@property (nonatomic, weak) id <CWAddPrinterViewControllerDelegate> delegate;
+
 
 @end

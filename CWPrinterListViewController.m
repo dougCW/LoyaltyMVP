@@ -8,10 +8,12 @@
 
 #import "CWPrinterListViewController.h"
 #import "CWPrinters.h"
+#import "CWAddPrinterViewController.h"
 
 @interface CWPrinterListViewController ()
 {
     NSMutableArray *myPrinterArray;
+    CWAddPrinterViewController *vc;
 }
 
 @end
@@ -43,11 +45,17 @@
     CWPrinters *testPrinter1 = [[CWPrinters alloc]init];
     testPrinter1.model = @"test Model";
     testPrinter1.brand = @"brand";
+    testPrinter1.name = @"printer 1";
     CWPrinters *testPrinter2 = [[CWPrinters alloc]init];
     testPrinter2.model = @"test Model2";
     testPrinter2.brand = @"brand2";
+    testPrinter2.name = @"printer 2";
     [myPrinterArray addObject:testPrinter1];
     [myPrinterArray addObject:testPrinter2];
+    
+    //instntiate the delegators vc
+    CWAddPrinterViewController *addPrintersVC = [[CWAddPrinterViewController alloc]init];
+    addPrintersVC.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,11 +96,11 @@
     UIView *viewForBrandLabel = [cell viewWithTag:100];
     UILabel *brandLabel = (UILabel *) viewForBrandLabel;
     brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
-    brandLabel.text = cellPrinter.brand;
+    brandLabel.text = cellPrinter.name;
     
     UIView *viewForModelLabel = [cell viewWithTag:101];
     UILabel *modelLabel = (UILabel *)viewForModelLabel;
-    modelLabel.text = cellPrinter.model;
+    modelLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
 
     return cell;
 }
@@ -111,6 +119,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [myPrinterArray removeObjectAtIndex:indexPath.row];
+
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
@@ -145,6 +155,25 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+#pragma mark - Segue stuff
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ListToAdd"])
+    {
+        vc = segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
+
+#pragma mark delegate action
+
+- (void) addPrinterToListPrinters:(CWPrinters *)printer
+{
+    [myPrinterArray addObject:printer];
+    [self.tableView reloadData];
 }
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CWAddPrinterViewController.h"
 
-@interface CWPrinterListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CWPrinterListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CWAddPrinterViewControllerDelegate>
 {
         __weak IBOutlet UIBarButtonItem *addButton;
 }

@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) NSString *brand;
 @property (strong, nonatomic) NSString *model;
+@property (strong, nonatomic) NSString *name;
 
 @end

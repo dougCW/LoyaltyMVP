@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8162FD31746A13F0059D805 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8162FD21746A13F0059D805 /* UIKit.framework */; };
+		D8162FD51746A13F0059D805 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8162FD41746A13F0059D805 /* Foundation.framework */; };
+		D8162FD71746A13F0059D805 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8162FD61746A13F0059D805 /* CoreGraphics.framework */; };
+		D8162FD91746A13F0059D805 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8162FD81746A13F0059D805 /* CoreData.framework */; };
+		D8162FDF1746A13F0059D805 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8162FDD1746A13F0059D805 /* InfoPlist.strings */; };
+		D8162FE11746A13F0059D805 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8162FE01746A13F0059D805 /* main.m */; };
+		D8162FE51746A13F0059D805 /* CWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8162FE41746A13F0059D805 /* CWAppDelegate.m */; };
+		D8162FE71746A13F0059D805 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D8162FE61746A13F0059D805 /* Default.png */; };
+		D8162FE91746A13F0059D805 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8162FE81746A13F0059D805 /* Default@2x.png */; };
+		D8162FEB1746A13F0059D805 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8162FEA1746A13F0059D805 /* Default-568h@2x.png */; };
+		D8162FEE1746A13F0059D805 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8162FEC1746A13F0059D805 /* MainStoryboard.storyboard */; };
+		D8162FF11746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8162FEF1746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld */; };
+		D8162FFF1746A1BD0059D805 /* CWHomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8162FFE1746A1BD0059D805 /* CWHomeScreenViewController.m */; };
+		D81630021746A4300059D805 /* CWLoyaltyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81630011746A4300059D805 /* CWLoyaltyViewController.m */; };
+		D81630051746A4490059D805 /* CWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81630041746A4480059D805 /* CWWebViewController.m */; };
+		D816300C1746A4AE0059D805 /* CWPrinterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */; };
+		D816300F1746A8B20059D805 /* CWAddPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */; };
+		D81630121746AC210059D805 /* CWPrinters.m in Sources */ = {isa = PBXBuildFile; fileRef = D81630111746AC210059D805 /* CWPrinters.m */; };
+		D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630171746F0F70059D805 /* CWNavBar@2x.png */; };
+		D816301A1746F0F70059D805 /* CWNavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630181746F0F70059D805 /* CWNavbar.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D8162FCF1746A13F0059D805 /* CartrideWorldLoyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartrideWorldLoyalty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8162FD21746A13F0059D805 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8162FD41746A13F0059D805 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8162FD61746A13F0059D805 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8162FD81746A13F0059D805 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D8162FDC1746A13F0059D805 /* CartrideWorldLoyalty-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CartrideWorldLoyalty-Info.plist"; sourceTree = "<group>"; };
+		D8162FDE1746A13F0059D805 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8162FE01746A13F0059D805 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8162FE21746A13F0059D805 /* CartrideWorldLoyalty-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CartrideWorldLoyalty-Prefix.pch"; sourceTree = "<group>"; };
+		D8162FE31746A13F0059D805 /* CWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWAppDelegate.h; sourceTree = "<group>"; };
+		D8162FE41746A13F0059D805 /* CWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWAppDelegate.m; sourceTree = "<group>"; };
+		D8162FE61746A13F0059D805 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D8162FE81746A13F0059D805 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D8162FEA1746A13F0059D805 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D8162FED1746A13F0059D805 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D8162FF01746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CartrideWorldLoyalty.xcdatamodel; sourceTree = "<group>"; };
+		D8162FFD1746A1BD0059D805 /* CWHomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHomeScreenViewController.h; sourceTree = "<group>"; };
+		D8162FFE1746A1BD0059D805 /* CWHomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHomeScreenViewController.m; sourceTree = "<group>"; };
+		D81630001746A4300059D805 /* CWLoyaltyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLoyaltyViewController.h; sourceTree = "<group>"; };
+		D81630011746A4300059D805 /* CWLoyaltyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLoyaltyViewController.m; sourceTree = "<group>"; };
+		D81630031746A4480059D805 /* CWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWebViewController.h; sourceTree = "<group>"; };
+		D81630041746A4480059D805 /* CWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWebViewController.m; sourceTree = "<group>"; };
+		D816300A1746A4AE0059D805 /* CWPrinterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CWPrinterListViewController.h; path = ../CWPrinterListViewController.h; sourceTree = "<group>"; };
+		D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWPrinterListViewController.m; path = ../CWPrinterListViewController.m; sourceTree = "<group>"; };
+		D816300D1746A8B20059D805 /* CWAddPrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAddPrinterViewController.h; sourceTree = "<group>"; };
+		D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAddPrinterViewController.m; sourceTree = "<group>"; };
+		D81630101746AC210059D805 /* CWPrinters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPrinters.h; sourceTree = "<group>"; };
+		D81630111746AC210059D805 /* CWPrinters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPrinters.m; sourceTree = "<group>"; };
+		D81630171746F0F70059D805 /* CWNavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CWNavBar@2x.png"; path = "../CWNavBar@2x.png"; sourceTree = "<group>"; };
+		D81630181746F0F70059D805 /* CWNavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWNavbar.png; path = ../CWNavbar.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8162FCC1746A13F0059D805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8162FD31746A13F0059D805 /* UIKit.framework in Frameworks */,
+				D8162FD51746A13F0059D805 /* Foundation.framework in Frameworks */,
+				D8162FD71746A13F0059D805 /* CoreGraphics.framework in Frameworks */,
+				D8162FD91746A13F0059D805 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8162FC61746A13F0059D805 = {
+			isa = PBXGroup;
+			children = (
+				D8162FDA1746A13F0059D805 /* CartrideWorldLoyalty */,
+				D8162FD11746A13F0059D805 /* Frameworks */,
+				D8162FD01746A13F0059D805 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8162FD01746A13F0059D805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8162FCF1746A13F0059D805 /* CartrideWorldLoyalty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8162FD11746A13F0059D805 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8162FD21746A13F0059D805 /* UIKit.framework */,
+				D8162FD41746A13F0059D805 /* Foundation.framework */,
+				D8162FD61746A13F0059D805 /* CoreGraphics.framework */,
+				D8162FD81746A13F0059D805 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8162FDA1746A13F0059D805 /* CartrideWorldLoyalty */ = {
+			isa = PBXGroup;
+			children = (
+				D8162FE31746A13F0059D805 /* CWAppDelegate.h */,
+				D8162FE41746A13F0059D805 /* CWAppDelegate.m */,
+				D8162FEF1746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld */,
+				D8162FEC1746A13F0059D805 /* MainStoryboard.storyboard */,
+				D81630101746AC210059D805 /* CWPrinters.h */,
+				D81630111746AC210059D805 /* CWPrinters.m */,
+				D81630091746A46B0059D805 /* ViewControllers */,
+				D8162FDB1746A13F0059D805 /* Supporting Files */,
+			);
+			path = CartrideWorldLoyalty;
+			sourceTree = "<group>";
+		};
+		D8162FDB1746A13F0059D805 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8162FDC1746A13F0059D805 /* CartrideWorldLoyalty-Info.plist */,
+				D8162FDD1746A13F0059D805 /* InfoPlist.strings */,
+				D8162FE01746A13F0059D805 /* main.m */,
+				D8162FE21746A13F0059D805 /* CartrideWorldLoyalty-Prefix.pch */,
+				D81630171746F0F70059D805 /* CWNavBar@2x.png */,
+				D81630181746F0F70059D805 /* CWNavbar.png */,
+				D8162FE61746A13F0059D805 /* Default.png */,
+				D8162FE81746A13F0059D805 /* Default@2x.png */,
+				D8162FEA1746A13F0059D805 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D81630091746A46B0059D805 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D816300A1746A4AE0059D805 /* CWPrinterListViewController.h */,
+				D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */,
+				D816300D1746A8B20059D805 /* CWAddPrinterViewController.h */,
+				D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */,
+				D81630001746A4300059D805 /* CWLoyaltyViewController.h */,
+				D81630011746A4300059D805 /* CWLoyaltyViewController.m */,
+				D81630031746A4480059D805 /* CWWebViewController.h */,
+				D81630041746A4480059D805 /* CWWebViewController.m */,
+				D8162FFD1746A1BD0059D805 /* CWHomeScreenViewController.h */,
+				D8162FFE1746A1BD0059D805 /* CWHomeScreenViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8162FCE1746A13F0059D805 /* CartrideWorldLoyalty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8162FFA1746A13F0059D805 /* Build configuration list for PBXNativeTarget "CartrideWorldLoyalty" */;
+			buildPhases = (
+				D8162FCB1746A13F0059D805 /* Sources */,
+				D8162FCC1746A13F0059D805 /* Frameworks */,
+				D8162FCD1746A13F0059D805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CartrideWorldLoyalty;
+			productName = CartrideWorldLoyalty;
+			productReference = D8162FCF1746A13F0059D805 /* CartrideWorldLoyalty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8162FC71746A13F0059D805 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CW;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = BankBox;
+			};
+			buildConfigurationList = D8162FCA1746A13F0059D805 /* Build configuration list for PBXProject "CartrideWorldLoyalty" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D8162FC61746A13F0059D805;
+			productRefGroup = D8162FD01746A13F0059D805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8162FCE1746A13F0059D805 /* CartrideWorldLoyalty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8162FCD1746A13F0059D805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8162FDF1746A13F0059D805 /* InfoPlist.strings in Resources */,
+				D8162FE71746A13F0059D805 /* Default.png in Resources */,
+				D8162FE91746A13F0059D805 /* Default@2x.png in Resources */,
+				D8162FEB1746A13F0059D805 /* Default-568h@2x.png in Resources */,
+				D8162FEE1746A13F0059D805 /* MainStoryboard.storyboard in Resources */,
+				D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */,
+				D816301A1746F0F70059D805 /* CWNavbar.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8162FCB1746A13F0059D805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8162FE11746A13F0059D805 /* main.m in Sources */,
+				D8162FE51746A13F0059D805 /* CWAppDelegate.m in Sources */,
+				D8162FF11746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld in Sources */,
+				D8162FFF1746A1BD0059D805 /* CWHomeScreenViewController.m in Sources */,
+				D81630021746A4300059D805 /* CWLoyaltyViewController.m in Sources */,
+				D81630051746A4490059D805 /* CWWebViewController.m in Sources */,
+				D816300C1746A4AE0059D805 /* CWPrinterListViewController.m in Sources */,
+				D816300F1746A8B20059D805 /* CWAddPrinterViewController.m in Sources */,
+				D81630121746AC210059D805 /* CWPrinters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8162FDD1746A13F0059D805 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8162FDE1746A13F0059D805 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8162FEC1746A13F0059D805 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8162FED1746A13F0059D805 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8162FF81746A13F0059D805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8162FF91746A13F0059D805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8162FFB1746A13F0059D805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CartrideWorldLoyalty/CartrideWorldLoyalty-Prefix.pch";
+				INFOPLIST_FILE = "CartrideWorldLoyalty/CartrideWorldLoyalty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8162FFC1746A13F0059D805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CartrideWorldLoyalty/CartrideWorldLoyalty-Prefix.pch";
+				INFOPLIST_FILE = "CartrideWorldLoyalty/CartrideWorldLoyalty-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8162FCA1746A13F0059D805 /* Build configuration list for PBXProject "CartrideWorldLoyalty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8162FF81746A13F0059D805 /* Debug */,
+				D8162FF91746A13F0059D805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8162FFA1746A13F0059D805 /* Build configuration list for PBXNativeTarget "CartrideWorldLoyalty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8162FFB1746A13F0059D805 /* Debug */,
+				D8162FFC1746A13F0059D805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8162FEF1746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8162FF01746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodel */,
+			);
+			currentVersion = D8162FF01746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodel */;
+			path = CartrideWorldLoyalty.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D8162FC71746A13F0059D805 /* Project object */;
+}

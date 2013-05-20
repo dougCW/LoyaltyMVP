@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CWHomeScreenViewController.h"
+
 
 @interface CWWebViewController : UIViewController
 {
-    
-    __weak IBOutlet UIWebView *webViewOutlet;
+        __weak IBOutlet UIWebView *webViewOutlet;
 }
+- (IBAction)backBtn:(UIButton *)sender;
+
 
 @end

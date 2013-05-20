@@ -9,10 +9,14 @@
 #import "CWWebViewController.h"
 
 @interface CWWebViewController ()
+{
+  
+}
 
 @end
 
 @implementation CWWebViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +37,8 @@
     NSURL *url = [NSURL URLWithString:mobileURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [webViewOutlet loadRequest:urlRequest];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,4 +47,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backBtn:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

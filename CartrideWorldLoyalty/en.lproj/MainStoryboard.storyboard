@@ -78,13 +78,135 @@
                     <view key="view" contentMode="scaleToFill" id="Oyc-4m-q99">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-b7-fgQ"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="reY-tb-NpU"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPS-dE-IUk"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-rA-EjX"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYn-45-3wj"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="MAY-fq-cAM"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-EG-3lB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-2P-pgo"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="lSs-c9-UGI"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gSi-Dp-fGb"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92k-sj-ExJ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="punch">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="punchBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="klr-pX-Khb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-an-wof">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="fh4-BP-C95"/>
+                                    <constraint firstAttribute="height" constant="130" id="neW-wX-ge3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="infoBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="AVv-4F-GCf"/>
+                                    <segue destination="xSI-UQ-YcR" kind="push" id="oPA-ye-C5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FKp-2P-pgo" firstAttribute="leading" secondItem="KPS-dE-IUk" secondAttribute="leading" type="default" id="14n-s3-yxb"/>
+                            <constraint firstItem="MAY-fq-cAM" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="30" id="2kd-3h-Fpc"/>
+                            <constraint firstItem="CMN-EG-3lB" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2oR-Xj-ltP"/>
+                            <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="66" id="35m-SR-gCs"/>
+                            <constraint firstItem="RDh-rA-EjX" firstAttribute="top" secondItem="KPS-dE-IUk" secondAttribute="top" type="default" id="4IH-6i-WAg"/>
+                            <constraint firstItem="CZh-an-wof" firstAttribute="centerX" secondItem="92k-sj-ExJ" secondAttribute="centerX" type="default" id="5n8-Dp-Oqf"/>
+                            <constraint firstItem="BYn-45-3wj" firstAttribute="leading" secondItem="RDh-rA-EjX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6aa-0h-3MO"/>
+                            <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="109" id="7ou-WT-c5x"/>
+                            <constraint firstItem="reY-tb-NpU" firstAttribute="leading" secondItem="0xm-b7-fgQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CJl-An-1Lj"/>
+                            <constraint firstItem="FKp-2P-pgo" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="E0G-VD-r7g"/>
+                            <constraint firstItem="BYn-45-3wj" firstAttribute="top" secondItem="RDh-rA-EjX" secondAttribute="top" type="default" id="IDU-bN-u4W"/>
+                            <constraint firstItem="gSi-Dp-fGb" firstAttribute="leading" secondItem="lSs-c9-UGI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IUx-wy-XG6"/>
+                            <constraint firstItem="reY-tb-NpU" firstAttribute="top" secondItem="0xm-b7-fgQ" secondAttribute="top" type="default" id="NqW-H3-zUP"/>
+                            <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="FKp-2P-pgo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Odt-8b-LUk"/>
+                            <constraint firstItem="0xm-b7-fgQ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="41" id="QDb-4w-WnS"/>
+                            <constraint firstItem="lSs-c9-UGI" firstAttribute="top" secondItem="FKp-2P-pgo" secondAttribute="top" type="default" id="YJ6-sP-l0d"/>
+                            <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="RDh-rA-EjX" secondAttribute="leading" type="default" id="YRg-Ye-KUf"/>
+                            <constraint firstItem="FKp-2P-pgo" firstAttribute="leading" secondItem="CMN-EG-3lB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aLt-tX-yLK"/>
+                            <constraint firstItem="KPS-dE-IUk" firstAttribute="top" secondItem="reY-tb-NpU" secondAttribute="top" type="default" id="c9i-c6-LMJ"/>
+                            <constraint firstItem="92k-sj-ExJ" firstAttribute="centerX" secondItem="Oyc-4m-q99" secondAttribute="centerX" type="default" id="cig-Vr-E3q"/>
+                            <constraint firstItem="gSi-Dp-fGb" firstAttribute="top" secondItem="lSs-c9-UGI" secondAttribute="top" type="default" id="fSf-Tu-K8u"/>
+                            <constraint firstAttribute="bottom" secondItem="Yao-eT-DX7" secondAttribute="bottom" constant="225" id="iff-Bn-LaO"/>
+                            <constraint firstItem="92k-sj-ExJ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="187" id="lD5-E8-GR5"/>
+                            <constraint firstItem="0xm-b7-fgQ" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="leading" type="default" id="mM6-KW-myT"/>
+                            <constraint firstItem="CZh-an-wof" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="250" id="nlM-fR-MmZ"/>
+                            <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="w1S-Mp-fs5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nFW-fa-bCP"/>
+                    <connections>
+                        <outlet property="couponImage" destination="CZh-an-wof" id="Igz-g2-Obh"/>
+                        <outlet property="logoImage1" destination="0xm-b7-fgQ" id="7jC-Mn-Z9b"/>
+                        <outlet property="logoImage10" destination="gSi-Dp-fGb" id="QQz-zZ-bha"/>
+                        <outlet property="logoImage2" destination="reY-tb-NpU" id="1Eg-Ox-vst"/>
+                        <outlet property="logoImage3" destination="KPS-dE-IUk" id="9OR-pc-Mag"/>
+                        <outlet property="logoImage4" destination="RDh-rA-EjX" id="73B-c7-M1E"/>
+                        <outlet property="logoImage5" destination="BYn-45-3wj" id="Ssc-Yt-tYW"/>
+                        <outlet property="logoImage6" destination="MAY-fq-cAM" id="sZL-gy-epL"/>
+                        <outlet property="logoImage7" destination="CMN-EG-3lB" id="FlN-rS-0pP"/>
+                        <outlet property="logoImage8" destination="FKp-2P-pgo" id="1Z5-tZ-UuU"/>
+                        <outlet property="logoImage9" destination="lSs-c9-UGI" id="1yd-aw-BoD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J43-9W-W09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="-803"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZOT-fa-TP4">
+            <objects>
+                <viewController id="xSI-UQ-YcR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UrH-Y2-Awb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbt-Bz-c0l">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">OFFER DETAILS:
+
+Receive one punch for every ink or toner cartridge refill. When you accumulate 10 punches, you will receive a free refill on any inkjet cartridge or 20% off any toner 
+cartridge refill.
+
+Cannot be combined with offer, discount or promotional program. Not redeemable for cash or cash equivalent. In the event of a return or exchange, discount may not be reused.
+
+Punches can only be acquired at time of purchase. Not valid toward previously purchased merchandise or services. Will not be replaced if lost or stolen.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sbt-Bz-c0l" firstAttribute="top" secondItem="UrH-Y2-Awb" secondAttribute="top" type="default" id="NT4-FH-Uds"/>
+                            <constraint firstItem="sbt-Bz-c0l" firstAttribute="bottom" secondItem="UrH-Y2-Awb" secondAttribute="bottom" type="default" id="Phb-NX-631"/>
+                            <constraint firstItem="sbt-Bz-c0l" firstAttribute="trailing" secondItem="UrH-Y2-Awb" secondAttribute="trailing" type="default" id="dhR-kf-UB2"/>
+                            <constraint firstItem="sbt-Bz-c0l" firstAttribute="leading" secondItem="UrH-Y2-Awb" secondAttribute="leading" type="default" id="qsR-6v-VvH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e56-Yn-HST"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSv-xa-wHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086" y="-803"/>
         </scene>
         <!--Printer List View Controller-->
         <scene sceneID="Vtx-Ko-X5i">
@@ -306,6 +428,63 @@
             <point key="canvasLocation" x="584" y="-76"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cwLogo.png" width="45" height="41"/>
+    </resources>
+    <classes>
+        <class className="CWAddPrinterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="brandSelectedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="CWHomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWLoyaltyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="CWPrinterListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CWWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

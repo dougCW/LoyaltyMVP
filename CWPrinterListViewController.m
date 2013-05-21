@@ -41,21 +41,6 @@
     
     //add array for data
     myPrinterArray = [[NSMutableArray alloc] init];
-    //add dummy data to array
-    CWPrinters *testPrinter1 = [[CWPrinters alloc]init];
-    testPrinter1.model = @"test Model";
-    testPrinter1.brand = @"brand";
-    testPrinter1.name = @"printer 1";
-    CWPrinters *testPrinter2 = [[CWPrinters alloc]init];
-    testPrinter2.model = @"test Model2";
-    testPrinter2.brand = @"brand2";
-    testPrinter2.name = @"printer 2";
-    [myPrinterArray addObject:testPrinter1];
-    [myPrinterArray addObject:testPrinter2];
-    
-    //instntiate the delegators vc
-    CWAddPrinterViewController *addPrintersVC = [[CWAddPrinterViewController alloc]init];
-    addPrintersVC.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +85,7 @@
     
     UIView *viewForModelLabel = [cell viewWithTag:101];
     UILabel *modelLabel = (UILabel *)viewForModelLabel;
+    modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
     modelLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
 
     return cell;

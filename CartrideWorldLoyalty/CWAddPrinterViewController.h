@@ -17,7 +17,7 @@
 #import "CWPrinterListViewController.h"
 #import "CWPrinters.h"
 
-@interface CWAddPrinterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@interface CWAddPrinterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 {
     __weak IBOutlet UILabel *brandSelectedLabel;
     __weak IBOutlet UITextField *nameTextField;

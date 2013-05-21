@@ -43,6 +43,10 @@
     
     //set up array
     brandArray = [[NSMutableArray alloc] initWithObjects:@"Brother", @"Canon", @"Dell", @"Epson", @"HP", @"Kodak", @"Konica Minolta", @"Lexmark", @"Oki", @"Panasonic", @"Samsung", @"Sharp", @"Xerox", @"Other", nil];
+   
+    //set delegates
+    modelTextField.delegate = self;
+    nameTextField.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +82,6 @@
     //unhide label and set to text
     brandSelectedLabel.text = brandSelected;
     brandSelectedLabel.hidden = NO;
-    
 }
 #pragma mark Actions
 
@@ -96,5 +99,14 @@
 {
     [modelTextField resignFirstResponder];
     [nameTextField resignFirstResponder];
+}
+
+#pragma mark Textfield stuff
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+   // [nameTextField resignFirstResponder];
+    return YES;
 }
 @end

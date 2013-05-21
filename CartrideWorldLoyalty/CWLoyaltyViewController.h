@@ -9,5 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface CWLoyaltyViewController : UIViewController
+{
+    __weak IBOutlet UIImageView *couponImage;
+    __weak IBOutlet UIImageView *logoImage1;
+    __weak IBOutlet UIImageView *logoImage2;
+    __weak IBOutlet UIImageView *logoImage3;
+    __weak IBOutlet UIImageView *logoImage4;
+    __weak IBOutlet UIImageView *logoImage5;
+    __weak IBOutlet UIImageView *logoImage6;
+    __weak IBOutlet UIImageView *logoImage7;
+    __weak IBOutlet UIImageView *logoImage8;
+    __weak IBOutlet UIImageView *logoImage9;
+    __weak IBOutlet UIImageView *logoImage10;
+}
+- (IBAction)punchBtn:(UIButton *)sender;
+- (IBAction)infoBtn:(UIButton *)sender;
 
 @end

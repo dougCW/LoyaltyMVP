@@ -42,9 +42,11 @@
     //set up yellow/grey images
     yellowImage = [UIImage imageNamed:@"couponYello.jpg"];
     greyImage = [UIImage imageNamed:@"coupongrey.jpg"];
-    
     couponImage.alpha = .8;
     couponImage.image = greyImage;
+    
+    //hide coupon btn
+    couponBtn.hidden = YES;
 
 }
 
@@ -62,7 +64,13 @@
     logoImage9.alpha = (scanNumber >= 9) ? 1 : .4;
     logoImage10.alpha = (scanNumber >= 10) ? 1 : .4;
     
+    //change coupon image to yellow one if ten scans
     couponImage.image = (scanNumber == 10) ? yellowImage : greyImage;
+    couponImage.alpha = 1.f;
+    
+    //unhide button if ten scans
+    couponBtn.hidden = (scanNumber == 10) ? NO : YES;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,7 +95,9 @@
     [reader.scanner setSymbology: ZBAR_QRCODE
                           config: ZBAR_CFG_ENABLE
                               to: 0];
-    reader.readerView.zoom = 1.0;
+    reader.readerView.zoom = 1;
+    //add overlay
+    reader.cameraOverlayView.backgroundColor = [UIColor redColor];
     //Present the reader to the user
     [self presentViewController:reader animated:YES completion:nil];
 }
@@ -104,10 +114,18 @@
     [self dismissViewControllerAnimated:YES completion:NO];
 }
 
+- (void) readerControllerDidFailToRead:(ZBarReaderController *)reader withRetry:(BOOL)retry
+{
+    NSLog(@"epic fail");
+}
+
 #pragma mark Info Btn
 
 - (IBAction)infoBtn:(UIButton *)sender
 {
     //sends to info vc
+}
+
+- (IBAction)couponBtn:(UIButton *)sender {
 }
 @end

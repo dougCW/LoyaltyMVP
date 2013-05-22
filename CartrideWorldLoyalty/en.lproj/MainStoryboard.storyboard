@@ -105,9 +105,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-an-wof">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="fh4-BP-C95"/>
-                                    <constraint firstAttribute="height" constant="130" id="neW-wX-ge3"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIO-41-yk3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="5d9-RD-yae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="couponBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="kWW-nj-3BV"/>
+                                    <segue destination="1wH-Xt-CCA" kind="push" id="OP8-yV-g41"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -125,36 +141,41 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FKp-2P-pgo" firstAttribute="leading" secondItem="KPS-dE-IUk" secondAttribute="leading" type="default" id="14n-s3-yxb"/>
-                            <constraint firstItem="MAY-fq-cAM" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="30" id="2kd-3h-Fpc"/>
                             <constraint firstItem="CMN-EG-3lB" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="2oR-Xj-ltP"/>
                             <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="66" id="35m-SR-gCs"/>
+                            <constraint firstItem="HIO-41-yk3" firstAttribute="bottom" secondItem="CZh-an-wof" secondAttribute="bottom" type="default" id="3DV-I0-WMS"/>
                             <constraint firstItem="RDh-rA-EjX" firstAttribute="top" secondItem="KPS-dE-IUk" secondAttribute="top" type="default" id="4IH-6i-WAg"/>
-                            <constraint firstItem="CZh-an-wof" firstAttribute="centerX" secondItem="92k-sj-ExJ" secondAttribute="centerX" type="default" id="5n8-Dp-Oqf"/>
                             <constraint firstItem="BYn-45-3wj" firstAttribute="leading" secondItem="RDh-rA-EjX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6aa-0h-3MO"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="109" id="7ou-WT-c5x"/>
+                            <constraint firstItem="CZh-an-wof" firstAttribute="leading" secondItem="HIO-41-yk3" secondAttribute="leading" type="default" id="9gp-mB-J5k"/>
                             <constraint firstItem="reY-tb-NpU" firstAttribute="leading" secondItem="0xm-b7-fgQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CJl-An-1Lj"/>
                             <constraint firstItem="FKp-2P-pgo" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="E0G-VD-r7g"/>
+                            <constraint firstItem="KPS-dE-IUk" firstAttribute="leading" secondItem="reY-tb-NpU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="FHo-mH-54C"/>
                             <constraint firstItem="BYn-45-3wj" firstAttribute="top" secondItem="RDh-rA-EjX" secondAttribute="top" type="default" id="IDU-bN-u4W"/>
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="leading" secondItem="lSs-c9-UGI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IUx-wy-XG6"/>
+                            <constraint firstItem="CZh-an-wof" firstAttribute="trailing" secondItem="HIO-41-yk3" secondAttribute="trailing" type="default" id="J2z-So-UZA"/>
+                            <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="CZh-an-wof" secondAttribute="top" type="default" id="JRz-gW-Lzx"/>
+                            <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="250" id="JbY-Zn-mkP"/>
+                            <constraint firstItem="RDh-rA-EjX" firstAttribute="leading" secondItem="KPS-dE-IUk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LW3-fa-rPS"/>
                             <constraint firstItem="reY-tb-NpU" firstAttribute="top" secondItem="0xm-b7-fgQ" secondAttribute="top" type="default" id="NqW-H3-zUP"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="FKp-2P-pgo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Odt-8b-LUk"/>
                             <constraint firstItem="0xm-b7-fgQ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="41" id="QDb-4w-WnS"/>
+                            <constraint firstItem="HIO-41-yk3" firstAttribute="centerX" secondItem="92k-sj-ExJ" secondAttribute="centerX" type="default" id="Xsv-BW-XGI"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="top" secondItem="FKp-2P-pgo" secondAttribute="top" type="default" id="YJ6-sP-l0d"/>
-                            <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="RDh-rA-EjX" secondAttribute="leading" type="default" id="YRg-Ye-KUf"/>
                             <constraint firstItem="FKp-2P-pgo" firstAttribute="leading" secondItem="CMN-EG-3lB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aLt-tX-yLK"/>
                             <constraint firstItem="KPS-dE-IUk" firstAttribute="top" secondItem="reY-tb-NpU" secondAttribute="top" type="default" id="c9i-c6-LMJ"/>
-                            <constraint firstItem="92k-sj-ExJ" firstAttribute="centerX" secondItem="Oyc-4m-q99" secondAttribute="centerX" type="default" id="cig-Vr-E3q"/>
+                            <constraint firstItem="0xm-b7-fgQ" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="30" id="d9f-bN-Ds9"/>
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="top" secondItem="lSs-c9-UGI" secondAttribute="top" type="default" id="fSf-Tu-K8u"/>
                             <constraint firstAttribute="bottom" secondItem="Yao-eT-DX7" secondAttribute="bottom" constant="225" id="iff-Bn-LaO"/>
                             <constraint firstItem="92k-sj-ExJ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="187" id="lD5-E8-GR5"/>
+                            <constraint firstItem="HIO-41-yk3" firstAttribute="centerX" secondItem="Oyc-4m-q99" secondAttribute="centerX" type="default" id="m5z-4Q-z7x"/>
                             <constraint firstItem="0xm-b7-fgQ" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="leading" type="default" id="mM6-KW-myT"/>
-                            <constraint firstItem="CZh-an-wof" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="250" id="nlM-fR-MmZ"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="w1S-Mp-fs5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nFW-fa-bCP"/>
                     <connections>
+                        <outlet property="couponBtn" destination="HIO-41-yk3" id="UFZ-Me-l27"/>
                         <outlet property="couponImage" destination="CZh-an-wof" id="Igz-g2-Obh"/>
                         <outlet property="logoImage1" destination="0xm-b7-fgQ" id="7jC-Mn-Z9b"/>
                         <outlet property="logoImage10" destination="gSi-Dp-fGb" id="QQz-zZ-bha"/>
@@ -171,6 +192,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J43-9W-W09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="-803"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="flt-cR-FxO">
+            <objects>
+                <viewController id="1wH-Xt-CCA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sz-hE-8tX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lzn-Th-h3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="-756"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZOT-fa-TP4">
@@ -431,6 +466,62 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
+    <classes>
+        <class className="CWAddPrinterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="brandSelectedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="CWHomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWLoyaltyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="couponBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="CWPrinterListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CWWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

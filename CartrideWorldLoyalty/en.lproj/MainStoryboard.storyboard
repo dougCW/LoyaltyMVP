@@ -206,7 +206,7 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSv-xa-wHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2086" y="-803"/>
+            <point key="canvasLocation" x="2150" y="-1495"/>
         </scene>
         <!--Printer List View Controller-->
         <scene sceneID="Vtx-Ko-X5i">
@@ -431,60 +431,6 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
-    <classes>
-        <class className="CWAddPrinterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="brandSelectedLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="CWHomeScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWLoyaltyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="CWPrinterListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CWWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -71,12 +71,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark QR SCAN
+
 - (IBAction)punchBtn:(UIButton *)sender
 {
     scanNumber++;
     [self checkLogos];
+    
+    //zbar stuff
+    //Create the reader.
+    ZBarReaderViewController *reader = [ZBarReaderViewController new];
+    //Setup a delegate to receive the results
+    reader.readerDelegate = self;
+    //Configure the reader.
+    [reader.scanner setSymbology: ZBAR_QRCODE
+                          config: ZBAR_CFG_ENABLE
+                              to: 0];
+    reader.readerView.zoom = 1.0;
+    //Present the reader to the user
+    [self presentViewController:reader animated:YES completion:nil];
 }
 
-- (IBAction)infoBtn:(UIButton *)sender {
+- (void) imagePickerController: (UIImagePickerController*) reader
+ didFinishPickingMediaWithInfo: (NSDictionary*) info
+{
+    //Process the results
+    id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
+    NSLog(@"results are: %@", results);
+    //UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    //Dismiss the reader
+    [self dismissViewControllerAnimated:YES completion:NO];
+}
+
+#pragma mark Info Btn
+
+- (IBAction)infoBtn:(UIButton *)sender
+{
+    //sends to info vc
 }
 @end

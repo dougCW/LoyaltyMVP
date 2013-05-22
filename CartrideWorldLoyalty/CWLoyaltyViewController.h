@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface CWLoyaltyViewController : UIViewController
+@interface CWLoyaltyViewController : UIViewController <ZBarReaderDelegate>
 {
     __weak IBOutlet UIImageView *couponImage;
     __weak IBOutlet UIImageView *logoImage1;

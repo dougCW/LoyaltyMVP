@@ -65,9 +65,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//
-//CRUDS IS BELOW
-//
 #pragma mark Core Data (CRUDS)
 //SAVE!!!
 -(void)saveData
@@ -191,16 +188,12 @@
 {
 }
 
-
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-
-
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -212,7 +205,9 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
 /* NOT NEEDED ANYMORE (no more delegate)
+
 #pragma mark - Segue stuff
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

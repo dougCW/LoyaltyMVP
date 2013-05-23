@@ -12,10 +12,14 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-xq-IZ5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-xq-IZ5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="Crh-ih-GXk"/>
+                                    <constraint firstAttribute="height" constant="44" id="iTc-Zx-E2g"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Frequent Filler Card">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -26,10 +30,13 @@
                                     <segue destination="MAB-R8-j2r" kind="push" identifier="homeToQR" id="595-XU-L6q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRl-lH-fdz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRl-lH-fdz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bEg-7j-ASI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="My Printers">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -40,10 +47,13 @@
                                     <segue destination="le3-P8-wlc" kind="push" identifier="homeToPrintList" id="EKK-yI-P3q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-6B-FBA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-6B-FBA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="F6a-8U-wb8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Website">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -68,6 +78,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j99-3k-nh5"/>
+                    <connections>
+                        <outlet property="freqFillerBtn" destination="y9I-xq-IZ5" id="TNn-DK-heC"/>
+                        <outlet property="myPrintersBtn" destination="CRl-lH-fdz" id="nys-gz-mwN"/>
+                        <outlet property="websitebtn" destination="tgW-6B-FBA" id="Go3-e1-kPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGE-f4-0AU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -558,62 +573,6 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
-    <classes>
-        <class className="CWAddPrinterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="brandSelectedLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="CWHomeScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWLoyaltyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="couponBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="couponBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="CWPrinterListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CWWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

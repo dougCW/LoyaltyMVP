@@ -91,13 +91,6 @@
 
 - (IBAction)punchBtn:(UIButton *)sender
 {
-    //update number of punches
-    scanNumber++;
-    NSLog(@"punches:%i", scanNumber);
-    [self updatePunches:punchSaved withInt:scanNumber];
-    
-    [self checkLogos];
-    
     //zbar stuff
     //Create the reader.
     ZBarReaderViewController *reader = [ZBarReaderViewController new];
@@ -121,6 +114,22 @@
     id<NSFastEnumeration> results = [info objectForKey: ZBarReaderControllerResults];
     NSLog(@"results are: %@", results);
     //UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    //process the results
+    ZBarSymbol *symbol = nil;
+    for(symbol in results)
+    {
+        if ([symbol.data isEqualToString:@"cartridgeBought"])
+        {
+            //add all the punches stuff.
+            //update number of punches
+            scanNumber++;
+            NSLog(@"punches:%i", scanNumber);
+            [self updatePunches:punchSaved withInt:scanNumber];
+            
+            //add punch
+            [self checkLogos];
+        }
+    }
     
     //Dismiss the reader
     [self dismissViewControllerAnimated:YES completion:NO];
@@ -131,7 +140,7 @@
     NSLog(@"epic fail");
 }
 
-#pragma mark Actions
+#pragma mark Other Actions
 
 - (IBAction)infoBtn:(UIButton *)sender
 {
@@ -143,9 +152,8 @@
     //sends to redeem vc
 }
 
-
 #pragma mark Core Data
-//SAVE!!!
+//Save
 -(void)saveData
 {
     NSError *error;
@@ -173,7 +181,6 @@
 
     [self saveData];
 }
-
 
 -(int) getNumberOfPunches
 {

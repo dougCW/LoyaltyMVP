@@ -28,9 +28,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
     //change navbar button colors
     [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:.8 green:.7 blue:.5 alpha:.3]];
+    
+    //add cartirdgeworld blue color to buttons
+    UIColor *cartBlue = [UIColor colorWithRed:0.0f green:11/255.0f blue:137/255.0f alpha:1];
+    freqFillerBtn.backgroundColor = cartBlue;
+    myPrintersBtn.backgroundColor = cartBlue;
+    websitebtn.backgroundColor = cartBlue;
 }
 
 - (void)didReceiveMemoryWarning

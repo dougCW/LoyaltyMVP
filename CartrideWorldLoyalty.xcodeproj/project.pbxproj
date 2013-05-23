@@ -24,7 +24,6 @@
 		D81630051746A4490059D805 /* CWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81630041746A4480059D805 /* CWWebViewController.m */; };
 		D816300C1746A4AE0059D805 /* CWPrinterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */; };
 		D816300F1746A8B20059D805 /* CWAddPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */; };
-		D81630121746AC210059D805 /* CWPrinters.m in Sources */ = {isa = PBXBuildFile; fileRef = D81630111746AC210059D805 /* CWPrinters.m */; };
 		D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630171746F0F70059D805 /* CWNavBar@2x.png */; };
 		D816301A1746F0F70059D805 /* CWNavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630181746F0F70059D805 /* CWNavbar.png */; };
 		D89FB79F174AB10D008605C8 /* cwLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FB79E174AB10D008605C8 /* cwLogo.png */; };
@@ -40,6 +39,8 @@
 		D89FBA8F174D6505008605C8 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FBA8A174D6505008605C8 /* zbar-helpicons.png */; };
 		D89FBA90174D6505008605C8 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FBA8B174D6505008605C8 /* zbar-samples.png */; };
 		D89FBA95174D6868008605C8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA94174D6868008605C8 /* QuartzCore.framework */; };
+		D89FBA9E174E85C5008605C8 /* CWPrinters.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FBA9D174E85C5008605C8 /* CWPrinters.m */; };
+		D89FBAA3174E9584008605C8 /* Punches.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FBAA2174E9584008605C8 /* Punches.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,8 +70,6 @@
 		D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CWPrinterListViewController.m; path = ../CWPrinterListViewController.m; sourceTree = "<group>"; };
 		D816300D1746A8B20059D805 /* CWAddPrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAddPrinterViewController.h; sourceTree = "<group>"; };
 		D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAddPrinterViewController.m; sourceTree = "<group>"; };
-		D81630101746AC210059D805 /* CWPrinters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPrinters.h; sourceTree = "<group>"; };
-		D81630111746AC210059D805 /* CWPrinters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPrinters.m; sourceTree = "<group>"; };
 		D81630171746F0F70059D805 /* CWNavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CWNavBar@2x.png"; path = "../CWNavBar@2x.png"; sourceTree = "<group>"; };
 		D81630181746F0F70059D805 /* CWNavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWNavbar.png; path = ../CWNavbar.png; sourceTree = "<group>"; };
 		D89FB79E174AB10D008605C8 /* cwLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cwLogo.png; path = ../cwLogo.png; sourceTree = "<group>"; };
@@ -106,6 +105,10 @@
 		D89FBA8A174D6505008605C8 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		D89FBA8B174D6505008605C8 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
 		D89FBA94174D6868008605C8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D89FBA9C174E85C5008605C8 /* CWPrinters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPrinters.h; sourceTree = "<group>"; };
+		D89FBA9D174E85C5008605C8 /* CWPrinters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPrinters.m; sourceTree = "<group>"; };
+		D89FBAA1174E9584008605C8 /* Punches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Punches.h; sourceTree = "<group>"; };
+		D89FBAA2174E9584008605C8 /* Punches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punches.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,10 +171,8 @@
 			children = (
 				D8162FE31746A13F0059D805 /* CWAppDelegate.h */,
 				D8162FE41746A13F0059D805 /* CWAppDelegate.m */,
-				D8162FEF1746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld */,
 				D8162FEC1746A13F0059D805 /* MainStoryboard.storyboard */,
-				D81630101746AC210059D805 /* CWPrinters.h */,
-				D81630111746AC210059D805 /* CWPrinters.m */,
+				D89FBAA4174E9594008605C8 /* Core Data */,
 				D81630091746A46B0059D805 /* ViewControllers */,
 				D8162FDB1746A13F0059D805 /* Supporting Files */,
 			);
@@ -278,6 +279,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D89FBAA4174E9594008605C8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D8162FEF1746A13F0059D805 /* CartrideWorldLoyalty.xcdatamodeld */,
+				D89FBA9C174E85C5008605C8 /* CWPrinters.h */,
+				D89FBA9D174E85C5008605C8 /* CWPrinters.m */,
+				D89FBAA1174E9584008605C8 /* Punches.h */,
+				D89FBAA2174E9584008605C8 /* Punches.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,7 +377,8 @@
 				D81630051746A4490059D805 /* CWWebViewController.m in Sources */,
 				D816300C1746A4AE0059D805 /* CWPrinterListViewController.m in Sources */,
 				D816300F1746A8B20059D805 /* CWAddPrinterViewController.m in Sources */,
-				D81630121746AC210059D805 /* CWPrinters.m in Sources */,
+				D89FBA9E174E85C5008605C8 /* CWPrinters.m in Sources */,
+				D89FBAA3174E9584008605C8 /* Punches.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

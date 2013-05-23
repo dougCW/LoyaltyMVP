@@ -7,6 +7,7 @@
 //
 
 #import "CWAppDelegate.h"
+#import "CWPrinters.h"
 
 
 @implementation CWAppDelegate
@@ -17,12 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    //manipulate navbar stuff
     UIImage *navBar = [UIImage imageNamed:@"CWNavBar.png"];
     [[UINavigationBar appearance] setBackgroundImage:navBar forBarMetrics:UIBarMetricsDefault];
     //UIImage *backButtonImage = [[UIImage imageNamed:@"button_normal.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
    // [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     // Override point for customization after application launch.
+    
     return YES;
 }
 							

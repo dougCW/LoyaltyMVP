@@ -31,7 +31,6 @@
     
     //change navbar button colors
     [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:.8 green:.7 blue:.5 alpha:.3]];
-
 }
 
 - (void)didReceiveMemoryWarning

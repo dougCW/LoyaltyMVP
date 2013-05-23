@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CWAddPrinterViewController.h"
 
-@interface CWPrinterListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, CWAddPrinterViewControllerDelegate>
+/*CWAddPrinterViewControllerDelegate  <--taken out of delegates before*/
+
+@interface CWPrinterListViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
         __weak IBOutlet UIBarButtonItem *addButton;
 }
+
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end

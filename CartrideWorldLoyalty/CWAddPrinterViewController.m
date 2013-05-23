@@ -7,6 +7,9 @@
 //
 
 #import "CWAddPrinterViewController.h"
+#import "CWAppDelegate.h"
+#import "CWPrinters.h"
+
 
 @interface CWAddPrinterViewController ()
 {
@@ -16,7 +19,7 @@
 @end
 
 @implementation CWAddPrinterViewController
-@synthesize pickerView, myPrintersArray, delegate;
+@synthesize pickerView, myPrintersArray, myManagedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,6 +50,10 @@
     //set delegates
     modelTextField.delegate = self;
     nameTextField.delegate = self;
+    
+    //pass the context
+    CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.myManagedObjectContext = [appDelegate managedObjectContext];
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,11 +94,19 @@
 
 - (IBAction)addPrinterBtn:(UIButton *)sender
 {
-    CWPrinters *printerToAdd = [[CWPrinters alloc] init];
+    NSManagedObjectContext *context = [self myManagedObjectContext];
+    CWPrinters *printerToAdd = [NSEntityDescription
+                                      insertNewObjectForEntityForName:@"CWPrinters"
+                                      inManagedObjectContext:context];
     printerToAdd.name = nameTextField.text;
     printerToAdd.model = modelTextField.text;
-    printerToAdd.brand = brandSelectedLabel.text;    
-    [self.delegate addPrinterToListPrinters:printerToAdd];
+    printerToAdd.brand = brandSelectedLabel.text;
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    //not needed anymore that we use core data
+    //[self.delegate addPrinterToListPrinters:printerToAdd];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

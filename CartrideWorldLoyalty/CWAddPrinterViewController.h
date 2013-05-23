@@ -5,17 +5,16 @@
 //  Created by Nathan Levine on 5/17/13.
 //  Copyright (c) 2013 BankBox. All rights reserved.
 //
-
+/* no longer needed with CoreData
 @class CWPrinters;
 @protocol CWAddPrinterViewControllerDelegate <NSObject>
 
 - (void)addPrinterToListPrinters:(CWPrinters *)printer;
 
 @end
-
+*/
 #import <UIKit/UIKit.h>
 #import "CWPrinterListViewController.h"
-#import "CWPrinters.h"
 
 @interface CWAddPrinterViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate>
 {
@@ -26,7 +25,9 @@
 - (IBAction)addPrinterBtn:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (strong, nonatomic) NSMutableArray *myPrintersArray;
-@property (nonatomic, weak) id <CWAddPrinterViewControllerDelegate> delegate;
+//@property (nonatomic, weak) id <CWAddPrinterViewControllerDelegate> delegate;
+@property (nonatomic,strong) NSManagedObjectContext* myManagedObjectContext;
+
 
 
 @end

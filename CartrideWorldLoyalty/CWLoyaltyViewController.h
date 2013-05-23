@@ -28,5 +28,7 @@
 - (IBAction)infoBtn:(UIButton *)sender;
 - (IBAction)couponBtn:(UIButton *)sender;
 
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+
 
 @end

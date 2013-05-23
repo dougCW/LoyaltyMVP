@@ -9,16 +9,18 @@
 #import "CWPrinterListViewController.h"
 #import "CWPrinters.h"
 #import "CWAddPrinterViewController.h"
+#import "CWAppDelegate.h"
 
 @interface CWPrinterListViewController ()
 {
-    NSMutableArray *myPrinterArray;
+    NSArray *myPrinterArray;
     CWAddPrinterViewController *vc;
 }
 
 @end
 
 @implementation CWPrinterListViewController
+@synthesize managedObjectContext;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,14 +41,72 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //add array for data
-    myPrinterArray = [[NSMutableArray alloc] init];
+    //pass the context
+    CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    //add saved data to array
+    myPrinterArray = [self getSavedPrinters];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //update our tableview array of data to reflect the new change
+    myPrinterArray = [self getSavedPrinters];
+    
+    //reload tableview
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//
+//CRUDS IS BELOW
+//
+#pragma mark Core Data (CRUDS)
+//SAVE!!!
+-(void)saveData
+{
+    NSError *error;
+    if (![managedObjectContext save:&error])
+    {
+        NSLog(@"failed to save error: %@", [error userInfo]);
+    }
+}
+
+//DELETE!!!
+-(void)deletePrinter: (CWPrinters*)printer
+{
+    [self.managedObjectContext deleteObject:printer];
+    
+    [self saveData];
+}
+
+-(NSArray *) getSavedPrinters
+{
+    //setting up the fetch
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"CWPrinters"
+                                                         inManagedObjectContext:self.managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    NSFetchedResultsController *fetchResultsController;
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects: nil];
+    NSError *sadnessError;
+    
+    //actually setting up the fetch
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    [fetchRequest setEntity:entityDescription];
+    fetchResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                 managedObjectContext:managedObjectContext
+                                                                   sectionNameKeyPath:nil
+                                                                            cacheName:nil];
+    [fetchResultsController performFetch:&sadnessError];
+    
+    return fetchResultsController.fetchedObjects;
 }
 
 #pragma mark - Table view data source
@@ -105,11 +165,21 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [myPrinterArray removeObjectAtIndex:indexPath.row];
-
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
+        //get the object that will be deleted
+        CWPrinters *printer = [myPrinterArray objectAtIndex:[indexPath row]];
+        
+        //delete it from the database
+        [self deletePrinter:printer];
+        
+        //update our tableview array of data to reflect the new change
+        myPrinterArray = [self getSavedPrinters];
+        
+        //remove the cell from view
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        //reload tableview
+        [tableView reloadData];
+    }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
@@ -142,7 +212,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
+/* NOT NEEDED ANYMORE (no more delegate)
 #pragma mark - Segue stuff
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -158,8 +228,14 @@
 
 - (void) addPrinterToListPrinters:(CWPrinters *)printer
 {
-    [myPrinterArray addObject:printer];
+    //create/save new printer
+    //[self createPrinterWithData:printer];
+
+    //update our tableview array of data to reflect the new change
+    myPrinterArray = [self getSavedPrinters];
+    
+    //reload tableview
     [self.tableView reloadData];
 }
-
+*/
 @end

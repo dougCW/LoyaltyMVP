@@ -1,18 +1,16 @@
 //
-//  CWPrinters.m
+//  Punches.m
 //  CartrideWorldLoyalty
 //
 //  Created by Nathan Levine on 5/23/13.
 //  Copyright (c) 2013 BankBox. All rights reserved.
 //
 
-#import "CWPrinters.h"
+#import "Punches.h"
 
 
-@implementation CWPrinters
+@implementation Punches
 
-@dynamic name;
-@dynamic model;
-@dynamic brand;
+@dynamic punchNumber;
 
 @end

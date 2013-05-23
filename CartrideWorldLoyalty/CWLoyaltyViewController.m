@@ -7,17 +7,21 @@
 //
 
 #import "CWLoyaltyViewController.h"
+#import "CWAppDelegate.h"
+#import "Punches.h"
 
 @interface CWLoyaltyViewController ()
 {
     int scanNumber;
     UIImage *yellowImage;
     UIImage *greyImage;
+    Punches *punchSaved;
 }
 
 @end
 
 @implementation CWLoyaltyViewController
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,8 +37,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //start scan number at zero
-    scanNumber = 0;
+    //pass the context
+    CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
+    //get numbr of punches
+    scanNumber = [self getNumberOfPunches];
+    NSLog(@"punches:%i", scanNumber);
     
     //set up logos
     [self checkLogos];
@@ -47,7 +56,6 @@
     
     //hide coupon btn
     couponBtn.hidden = YES;
-
 }
 
 - (void) checkLogos
@@ -83,7 +91,11 @@
 
 - (IBAction)punchBtn:(UIButton *)sender
 {
+    //update number of punches
     scanNumber++;
+    NSLog(@"punches:%i", scanNumber);
+    [self updatePunches:punchSaved withInt:scanNumber];
+    
     [self checkLogos];
     
     //zbar stuff
@@ -119,13 +131,70 @@
     NSLog(@"epic fail");
 }
 
-#pragma mark Info Btn
+#pragma mark Actions
 
 - (IBAction)infoBtn:(UIButton *)sender
 {
     //sends to info vc
 }
 
-- (IBAction)couponBtn:(UIButton *)sender {
+- (IBAction)couponBtn:(UIButton *)sender
+{
+    //sends to redeem vc
 }
+
+
+#pragma mark Core Data
+//SAVE!!!
+-(void)saveData
+{
+    NSError *error;
+    if (![managedObjectContext save:&error])
+    {
+        NSLog(@"failed to save error: %@", [error userInfo]);
+    }
+}
+
+//create punchesNumber
+-(Punches *) createPunchWithInt: (int)integer
+{
+    Punches *punchToCreate = [NSEntityDescription insertNewObjectForEntityForName:@"Punches" inManagedObjectContext:managedObjectContext];
+    
+    punchToCreate.punchNumber = [NSNumber numberWithInt:integer];
+    
+    [self saveData];
+    return punchToCreate;
+}
+
+//UPDATE!!!
+-(void)updatePunches:(Punches *)punch withInt: (int)newNumberOfPunches
+{
+    [punch setPunchNumber:[NSNumber numberWithInt:newNumberOfPunches]];
+
+    [self saveData];
+}
+
+
+-(int) getNumberOfPunches
+{
+    //setting up the fetch
+    NSError *error;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Punches"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    //if no number has been saved start one at zero otherwise grab the number of punches
+    if (fetchedObjects.count == 0)
+    {
+        punchSaved =[self createPunchWithInt:0];
+    } else {
+        punchSaved = [fetchedObjects objectAtIndex:0];
+    }
+    int numberOfPunches = [punchSaved.punchNumber intValue];
+    
+    return numberOfPunches;
+}
+
 @end

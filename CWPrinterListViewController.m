@@ -15,6 +15,7 @@
 {
     NSArray *myPrinterArray;
     CWAddPrinterViewController *vc;
+    BOOL usePrinter;
 }
 
 @end
@@ -44,8 +45,6 @@
     //pass the context
     CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
-    //add saved data to array
-    myPrinterArray = [self getSavedPrinters];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -54,6 +53,13 @@
     
     //update our tableview array of data to reflect the new change
     myPrinterArray = [self getSavedPrinters];
+    
+    if (myPrinterArray.count > 0)
+    {
+        usePrinter = YES;
+    } else {
+        usePrinter = NO;
+    }
     
     //reload tableview
     [self.tableView reloadData];
@@ -117,7 +123,12 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return myPrinterArray.count;
+    if (usePrinter == YES)
+    {
+        return myPrinterArray.count;
+    } else {
+        return 1;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -131,19 +142,39 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:CellIdentifier];
     }
-    //get the printer for the row
-    CWPrinters *cellPrinter = [myPrinterArray objectAtIndex:indexPath.row];
     
-    //Populate all cells with data
-    UIView *viewForBrandLabel = [cell viewWithTag:100];
-    UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-    brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
-    brandLabel.text = cellPrinter.name;
-    
-    UIView *viewForModelLabel = [cell viewWithTag:101];
-    UILabel *modelLabel = (UILabel *)viewForModelLabel;
-    modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
-    modelLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
+    //fill with printer stuff if array has stuff
+    if (usePrinter == YES)
+    {
+        //get the printer for the row
+        CWPrinters *cellPrinter = [myPrinterArray objectAtIndex:indexPath.row];
+        
+        //Populate all cells with data
+        UIView *viewForBrandLabel = [cell viewWithTag:100];
+        UILabel *brandLabel = (UILabel *) viewForBrandLabel;
+        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
+        brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
+        
+        UIView *viewForModelLabel = [cell viewWithTag:101];
+        UILabel *modelLabel = (UILabel *)viewForModelLabel;
+        modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
+        modelLabel.text = [NSString stringWithFormat:@"%@", cellPrinter.name];
+    }
+    if (usePrinter == NO)
+    {
+        //populate first cell to say add by clicking plus btn
+        UIView *viewForBrandLabel = [cell viewWithTag:100];
+        UILabel *brandLabel = (UILabel *) viewForBrandLabel;
+        brandLabel.center = cell.center;
+        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
+        brandLabel.text = @"Add printers by pressing + on top right";
+        
+        //hide second label
+        UIView *viewForModelLabel = [cell viewWithTag:101];
+        UILabel *modelLabel = (UILabel *)viewForModelLabel;
+        modelLabel.hidden = YES;
+    }
+
 
     return cell;
 }
@@ -204,6 +235,8 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    //deselect the row
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /* NOT NEEDED ANYMORE (no more delegate)

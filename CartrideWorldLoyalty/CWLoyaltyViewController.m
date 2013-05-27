@@ -44,10 +44,7 @@
     //get numbr of punches
     scanNumber = [self getNumberOfPunches];
     NSLog(@"punches:%i", scanNumber);
-    
-    //set up logos
-    [self checkLogos];
-    
+
     //set up yellow/grey images
     yellowImage = [UIImage imageNamed:@"couponYello.jpg"];
     greyImage = [UIImage imageNamed:@"coupongrey.jpg"];
@@ -56,6 +53,21 @@
     
     //hide coupon btn
     couponBtn.hidden = YES;
+    
+    //TESTING PURPOSES ONLY MAKE SURE TO CHANGE
+    //
+    //scanNumber = 7;
+    //
+    //
+    //CHANGE CHANGW CHANGE/
+    
+    //set up logos
+    [self checkLogos];
+    
+    //notification check
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(makeCounterZero:) name:@"redeemCoupon"
+                                               object:nil];
 }
 
 - (void) checkLogos
@@ -96,13 +108,22 @@
     ZBarReaderViewController *reader = [ZBarReaderViewController new];
     //Setup a delegate to receive the results
     reader.readerDelegate = self;
+    //turn off flash
+    reader.cameraFlashMode = UIImagePickerControllerCameraFlashModeOff;
+    //support only portrait orientations...
+    reader.supportedOrientationsMask = ZBarOrientationMask(UIInterfaceOrientationPortrait);
+    //dont support video
+    reader.enableCache = NO;
+    //set up scanner
+    ZBarImageScanner *scanner = reader.scanner;
     //Configure the reader.
-    [reader.scanner setSymbology: ZBAR_QRCODE
-                          config: ZBAR_CFG_ENABLE
-                              to: 0];
+    [scanner setSymbology: ZBAR_QRCODE
+                   config: ZBAR_CFG_ENABLE
+                       to: 1];
     reader.readerView.zoom = 1;
     //add overlay
     reader.cameraOverlayView.backgroundColor = [UIColor redColor];
+    reader.scanCrop = CGRectMake(0, 0, 1, 1);
     //Present the reader to the user
     [self presentViewController:reader animated:YES completion:nil];
 }
@@ -116,23 +137,28 @@
     //UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
     //process the results
     ZBarSymbol *symbol = nil;
+    NSString *result;
     for(symbol in results)
     {
-        if ([symbol.data isEqualToString:@"cartridgeBought"])
-        {
-            //add all the punches stuff.
-            //update number of punches
-            scanNumber++;
-            NSLog(@"punches:%i", scanNumber);
-            [self updatePunches:punchSaved withInt:scanNumber];
-            
-            //add punch
-            [self checkLogos];
-        }
+        result = symbol.data;
+        break;
     }
-    
+    if ([result isEqualToString:@"cartridge bought!"])
+    {
+        //add all the punches stuff.
+        //update number of punches
+        scanNumber++;
+        NSLog(@"punches:%i", scanNumber);
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid QR Code" message:@"sorry try again" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+
     //Dismiss the reader
     [self dismissViewControllerAnimated:YES completion:NO];
+    //add punch
+    [self checkLogos];
+    [self updatePunches:punchSaved withInt:scanNumber];
 }
 
 - (void) readerControllerDidFailToRead:(ZBarReaderController *)reader withRetry:(BOOL)retry
@@ -202,6 +228,14 @@
     int numberOfPunches = [punchSaved.punchNumber intValue];
     
     return numberOfPunches;
+}
+
+#pragma mark NSNotification
+-(void)makeCounterZero:(NSNotification *)notification
+{
+    scanNumber = 0;
+    //check logos and stuff
+    [self checkLogos];
 }
 
 @end

@@ -19,7 +19,7 @@
 @end
 
 @implementation CWAddPrinterViewController
-@synthesize pickerView, myPrintersArray, myManagedObjectContext;
+@synthesize myPrintersArray, myManagedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,15 +34,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    //hide labels
-    brandSelectedLabel.hidden = YES;
-    
+
     //add the pickerview elements
+    UIPickerView *pickerView = [[UIPickerView alloc] init];
     pickerView.delegate = self;
     pickerView.dataSource = self;
     pickerView.showsSelectionIndicator = YES;
     pickerView.opaque = NO;
+    
+    //add the picker to the textfield
+    brandTextField.inputView = pickerView;
     
     //set up array
     brandArray = [[NSMutableArray alloc] initWithObjects:@"Brother", @"Canon", @"Dell", @"Epson", @"HP", @"Kodak", @"Konica Minolta", @"Lexmark", @"Oki", @"Panasonic", @"Samsung", @"Sharp", @"Xerox", @"Other", nil];
@@ -54,6 +55,11 @@
     //pass the context
     CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
     self.myManagedObjectContext = [appDelegate managedObjectContext];
+    
+    //add cartirdgeworld blue color to buttons
+    UIColor *cartBlue = [UIColor colorWithRed:50/255.0f green:75/255.0f blue:136/255.0f alpha:1];
+    addPrinterBtn.backgroundColor = cartBlue;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,8 +93,8 @@
     NSString *brandSelected = [brandArray objectAtIndex:row];
     
     //unhide label and set to text
-    brandSelectedLabel.text = brandSelected;
-    brandSelectedLabel.hidden = NO;
+    brandTextField.text = brandSelected;
+    brandTextField.hidden = NO;
 }
 #pragma mark Actions
 
@@ -100,7 +106,7 @@
                                       inManagedObjectContext:context];
     printerToAdd.name = nameTextField.text;
     printerToAdd.model = modelTextField.text;
-    printerToAdd.brand = brandSelectedLabel.text;
+    printerToAdd.brand = brandTextField.text;
     NSError *error;
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
@@ -114,6 +120,7 @@
 {
     [modelTextField resignFirstResponder];
     [nameTextField resignFirstResponder];
+    [brandTextField resignFirstResponder];
 }
 
 #pragma mark Textfield stuff

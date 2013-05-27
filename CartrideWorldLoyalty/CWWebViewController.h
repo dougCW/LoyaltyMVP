@@ -10,9 +10,12 @@
 #import "CWHomeScreenViewController.h"
 
 
-@interface CWWebViewController : UIViewController
+@interface CWWebViewController : UIViewController <UIWebViewDelegate>
 {
+    __weak IBOutlet UIView *backgroundView;
+    __weak IBOutlet UIActivityIndicatorView *activityIndicator;
         __weak IBOutlet UIWebView *webViewOutlet;
+    __weak IBOutlet UIButton *backButtonOutlet;
 }
 - (IBAction)backBtn:(UIButton *)sender;
 

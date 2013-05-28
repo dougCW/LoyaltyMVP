@@ -113,7 +113,7 @@
 		D89FBAA2174E9584008605C8 /* Punches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Punches.m; sourceTree = "<group>"; };
 		D89FBAA5174FCD5A008605C8 /* CWRedeemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRedeemViewController.h; sourceTree = "<group>"; };
 		D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRedeemViewController.m; sourceTree = "<group>"; };
-		D8B49CFB175406E100532ABA /* CWWebPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CWWebPage.png; sourceTree = "<group>"; };
+		D8B49CFB175406E100532ABA /* CWWebPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWWebPage.png; path = ../CWWebPage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,6 @@
 		D8162FC61746A13F0059D805 = {
 			isa = PBXGroup;
 			children = (
-				D8B49CFB175406E100532ABA /* CWWebPage.png */,
 				D89FBA6E174D6505008605C8 /* ZBarSDK */,
 				D8162FDA1746A13F0059D805 /* CartrideWorldLoyalty */,
 				D8162FD11746A13F0059D805 /* Frameworks */,
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				D89FB7A0174AB8C6008605C8 /* coupongrey.jpg */,
+				D8B49CFB175406E100532ABA /* CWWebPage.png */,
 				D89FB7A1174AB8C6008605C8 /* couponYello.jpg */,
 				D89FB79E174AB10D008605C8 /* cwLogo.png */,
 				D8162FDC1746A13F0059D805 /* CartrideWorldLoyalty-Info.plist */,

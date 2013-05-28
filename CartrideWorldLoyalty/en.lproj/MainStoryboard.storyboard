@@ -263,15 +263,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y9O-jz-NE0" firstAttribute="leading" secondItem="5sz-hE-8tX" secondAttribute="leading" constant="62" id="2c0-CZ-nmf"/>
                             <constraint firstItem="dQf-mq-XZT" firstAttribute="top" secondItem="sL6-nE-XNM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3Jg-Sl-Vs8"/>
                             <constraint firstItem="Nby-f6-UCr" firstAttribute="centerX" secondItem="S7g-8I-hQQ" secondAttribute="centerX" type="default" id="4dh-Pq-G1c"/>
-                            <constraint firstItem="y9O-jz-NE0" firstAttribute="top" secondItem="5sz-hE-8tX" secondAttribute="top" constant="56" id="EoF-d1-gUW"/>
+                            <constraint firstItem="y9O-jz-NE0" firstAttribute="leading" secondItem="5sz-hE-8tX" secondAttribute="leading" constant="70" id="8mf-q8-mAM"/>
+                            <constraint firstItem="y9O-jz-NE0" firstAttribute="top" secondItem="5sz-hE-8tX" secondAttribute="top" constant="150" id="9f1-GV-Peo"/>
                             <constraint firstItem="Nby-f6-UCr" firstAttribute="trailing" secondItem="dQf-mq-XZT" secondAttribute="trailing" type="default" id="J8X-g2-96Q"/>
+                            <constraint firstItem="sL6-nE-XNM" firstAttribute="centerX" secondItem="5sz-hE-8tX" secondAttribute="centerX" type="default" id="Jyl-hd-kni"/>
                             <constraint firstItem="sL6-nE-XNM" firstAttribute="centerX" secondItem="dQf-mq-XZT" secondAttribute="centerX" type="default" id="SX5-LC-JPd"/>
-                            <constraint firstItem="S7g-8I-hQQ" firstAttribute="top" secondItem="5sz-hE-8tX" secondAttribute="top" constant="200" id="hQh-Nh-k1K"/>
+                            <constraint firstAttribute="bottom" secondItem="S7g-8I-hQQ" secondAttribute="bottom" constant="150" id="bh8-6O-b6e"/>
                             <constraint firstItem="Nby-f6-UCr" firstAttribute="top" secondItem="dQf-mq-XZT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n7d-JO-lUN"/>
-                            <constraint firstItem="S7g-8I-hQQ" firstAttribute="leading" secondItem="5sz-hE-8tX" secondAttribute="leading" constant="27" id="p6w-gz-QPM"/>
                             <constraint firstItem="sL6-nE-XNM" firstAttribute="top" secondItem="y9O-jz-NE0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vYi-Pr-nVy"/>
                         </constraints>
                     </view>

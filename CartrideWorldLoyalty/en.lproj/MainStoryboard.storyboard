@@ -9,10 +9,11 @@
             <objects>
                 <viewController id="x02-3q-Lrc" customClass="CWHomeScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xAG-IJ-ed1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-xq-IZ5">
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.29411764705882354" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="7lK-DG-tOH"/>
                                     <constraint firstAttribute="width" constant="250" id="pxM-Oq-d8N"/>
@@ -31,6 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRl-lH-fdz">
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.29411764705882354" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="asL-1Q-A1s"/>
                                 </constraints>
@@ -48,6 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgW-6B-FBA">
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.29411764705882354" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" type="user" id="tWs-Iw-8LO"/>
                                 </constraints>
@@ -68,7 +71,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="y9I-xq-IZ5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xAG-IJ-ed1" secondAttribute="top" constant="53" type="user" id="7NB-hc-b6D"/>
-                            <constraint firstAttribute="bottom" secondItem="tgW-6B-FBA" secondAttribute="bottom" constant="176" type="user" id="8B9-Fj-H5O"/>
                             <constraint firstItem="CRl-lH-fdz" firstAttribute="trailing" secondItem="y9I-xq-IZ5" secondAttribute="trailing" type="default" id="CNQ-sA-hyz"/>
                             <constraint firstItem="tgW-6B-FBA" firstAttribute="trailing" secondItem="CRl-lH-fdz" secondAttribute="trailing" type="default" id="ChV-Q5-e2C"/>
                             <constraint firstItem="y9I-xq-IZ5" firstAttribute="top" secondItem="xAG-IJ-ed1" secondAttribute="top" constant="53" id="FiK-Lo-A1F"/>
@@ -80,11 +82,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j99-3k-nh5"/>
-                    <connections>
-                        <outlet property="freqFillerBtn" destination="y9I-xq-IZ5" id="TNn-DK-heC"/>
-                        <outlet property="myPrintersBtn" destination="CRl-lH-fdz" id="nys-gz-mwN"/>
-                        <outlet property="websitebtn" destination="tgW-6B-FBA" id="Go3-e1-kPC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGE-f4-0AU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +92,7 @@
             <objects>
                 <viewController id="MAB-R8-j2r" customClass="CWLoyaltyViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oyc-4m-q99">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cwLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0xm-b7-fgQ"/>
@@ -145,7 +142,7 @@
                                     <segue destination="1wH-Xt-CCA" kind="push" id="OP8-yV-g41"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -170,7 +167,6 @@
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="top" secondItem="lSs-c9-UGI" secondAttribute="top" type="default" id="Fge-3L-VXJ"/>
                             <constraint firstItem="92k-sj-ExJ" firstAttribute="centerX" secondItem="Oyc-4m-q99" secondAttribute="centerX" type="default" id="FnT-eC-nUT"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="109" id="Isa-YZ-tlr"/>
-                            <constraint firstAttribute="bottom" secondItem="Yao-eT-DX7" secondAttribute="bottom" constant="225" id="QbN-jd-4gY"/>
                             <constraint firstItem="RDh-rA-EjX" firstAttribute="leading" secondItem="KPS-dE-IUk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bmh-dm-Tyx"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="FKp-2P-pgo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cS4-2p-VQn"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="top" secondItem="FKp-2P-pgo" secondAttribute="top" type="default" id="eDR-Jt-QBn"/>
@@ -186,10 +182,11 @@
                             <constraint firstItem="reY-tb-NpU" firstAttribute="top" secondItem="KPS-dE-IUk" secondAttribute="top" type="default" id="m0n-Jy-76d"/>
                             <constraint firstItem="CZh-an-wof" firstAttribute="trailing" secondItem="HIO-41-yk3" secondAttribute="trailing" type="default" id="m6n-i2-Rvk"/>
                             <constraint firstItem="0xm-b7-fgQ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="41" id="n4S-AP-zmw"/>
+                            <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="68" id="nSI-gC-W35"/>
+                            <constraint firstAttribute="bottom" secondItem="Yao-eT-DX7" secondAttribute="bottom" constant="134" id="oGt-Hy-FoW"/>
                             <constraint firstItem="CZh-an-wof" firstAttribute="leading" secondItem="HIO-41-yk3" secondAttribute="leading" type="default" id="oRc-tN-oxp"/>
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="leading" secondItem="lSs-c9-UGI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pgs-Q2-XfR"/>
                             <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="250" id="rgL-vv-wcc"/>
-                            <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="66" id="wZk-FM-3R8"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="woc-r0-vIw"/>
                             <constraint firstItem="CMN-EG-3lB" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wqs-ev-ku1"/>
                         </constraints>
@@ -219,7 +216,7 @@
             <objects>
                 <viewController id="1wH-Xt-CCA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sz-hE-8tX">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Congratulations!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9O-jz-NE0">
@@ -288,7 +285,7 @@
             <objects>
                 <viewController id="Hkg-I8-EYy" customClass="CWRedeemViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWc-bR-6Pb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="enter code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJd-hl-Ord">
@@ -354,7 +351,7 @@
             <objects>
                 <viewController id="xSI-UQ-YcR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UrH-Y2-Awb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sbt-Bz-c0l">
@@ -390,7 +387,7 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
             <objects>
                 <tableViewController id="le3-P8-wlc" customClass="CWPrinterListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="62" sectionHeaderHeight="22" sectionFooterHeight="22" id="2pT-fN-EmD">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -451,7 +448,7 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
             <objects>
                 <viewController id="s3U-0F-Aqz" customClass="CWAddPrinterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g8k-GN-RbA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printer Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjT-de-JjC">
@@ -544,7 +541,7 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
             <objects>
                 <viewController id="Awh-gK-wru" customClass="CWWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Mw-v5-XOu">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YDR-PQ-8gK">
@@ -624,9 +621,75 @@ Punches can only be acquired at time of purchase. Not valid toward previously pu
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
+    <classes>
+        <class className="CWAddPrinterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="addPrinterBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="brandTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CWHomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWLoyaltyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="couponBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="CWPrinterListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CWRedeemViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWRedeemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="redeemBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="codeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CWWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="backButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

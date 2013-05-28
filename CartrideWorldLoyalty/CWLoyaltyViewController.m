@@ -48,18 +48,10 @@
     //set up yellow/grey images
     yellowImage = [UIImage imageNamed:@"couponYello.jpg"];
     greyImage = [UIImage imageNamed:@"coupongrey.jpg"];
-    couponImage.alpha = .8;
     couponImage.image = greyImage;
     
     //hide coupon btn
     couponBtn.hidden = YES;
-    
-    //TESTING PURPOSES ONLY MAKE SURE TO CHANGE
-    //
-    //scanNumber = 7;
-    //
-    //
-    //CHANGE CHANGW CHANGE/
     
     //set up logos
     [self checkLogos];
@@ -72,24 +64,70 @@
 
 - (void) checkLogos
 {
-    //set up the ten logos
-    logoImage1.alpha = (scanNumber >= 1) ? 1 : .4;
-    logoImage2.alpha = (scanNumber >= 2) ? 1 : .4;
-    logoImage3.alpha = (scanNumber >= 3) ? 1 : .4;
-    logoImage4.alpha = (scanNumber >= 4) ? 1 : .4;
-    logoImage5.alpha = (scanNumber >= 5) ? 1 : .4;
-    logoImage6.alpha = (scanNumber >= 6) ? 1 : .4;
-    logoImage7.alpha = (scanNumber >= 7) ? 1 : .4;
-    logoImage8.alpha = (scanNumber >= 8) ? 1 : .4;
-    logoImage9.alpha = (scanNumber >= 9) ? 1 : .4;
-    logoImage10.alpha = (scanNumber >= 10) ? 1 : .4;
     
+    if (scanNumber <= 10)
+    {
+        //set up the ten logos
+        logoImage1.alpha = (scanNumber >= 1) ? 1 : .4;
+        logoImage2.alpha = (scanNumber >= 2) ? 1 : .4;
+        logoImage3.alpha = (scanNumber >= 3) ? 1 : .4;
+        logoImage4.alpha = (scanNumber >= 4) ? 1 : .4;
+        logoImage5.alpha = (scanNumber >= 5) ? 1 : .4;
+        logoImage6.alpha = (scanNumber >= 6) ? 1 : .4;
+        logoImage7.alpha = (scanNumber >= 7) ? 1 : .4;
+        logoImage8.alpha = (scanNumber >= 8) ? 1 : .4;
+        logoImage9.alpha = (scanNumber >= 9) ? 1 : .4;
+        logoImage10.alpha = (scanNumber >= 10) ? 1 : .4;
+    } else if (scanNumber > 10 && scanNumber  < 21) {
+        logoImage1.alpha = (scanNumber - 10 >= 1) ? 1 : .4;
+        logoImage2.alpha = (scanNumber - 10 >= 2) ? 1 : .4;
+        logoImage3.alpha = (scanNumber - 10 >= 3) ? 1 : .4;
+        logoImage4.alpha = (scanNumber - 10 >= 4) ? 1 : .4;
+        logoImage5.alpha = (scanNumber - 10 >= 5) ? 1 : .4;
+        logoImage6.alpha = (scanNumber - 10 >= 6) ? 1 : .4;
+        logoImage7.alpha = (scanNumber - 10 >= 7) ? 1 : .4;
+        logoImage8.alpha = (scanNumber - 10 >= 8) ? 1 : .4;
+        logoImage9.alpha = (scanNumber - 10 >= 9) ? 1 : .4;
+        logoImage10.alpha = (scanNumber - 10 >= 10) ? 1 : .4;
+    } else if (scanNumber > 20 && scanNumber  < 31) {
+        logoImage1.alpha = (scanNumber - 20 >= 1) ? 1 : .4;
+        logoImage2.alpha = (scanNumber - 20 >= 2) ? 1 : .4;
+        logoImage3.alpha = (scanNumber - 20 >= 3) ? 1 : .4;
+        logoImage4.alpha = (scanNumber - 20 >= 4) ? 1 : .4;
+        logoImage5.alpha = (scanNumber - 20 >= 5) ? 1 : .4;
+        logoImage6.alpha = (scanNumber - 20 >= 6) ? 1 : .4;
+        logoImage7.alpha = (scanNumber - 20 >= 7) ? 1 : .4;
+        logoImage8.alpha = (scanNumber - 20 >= 8) ? 1 : .4;
+        logoImage9.alpha = (scanNumber - 20 >= 9) ? 1 : .4;
+        logoImage10.alpha = (scanNumber - 20 >= 10) ? 1 : .4;
+    } else if (scanNumber > 30 && scanNumber  < 41) {
+        logoImage1.alpha = (scanNumber - 30 >= 1) ? 1 : .4;
+        logoImage2.alpha = (scanNumber - 30 >= 2) ? 1 : .4;
+        logoImage3.alpha = (scanNumber - 30 >= 3) ? 1 : .4;
+        logoImage4.alpha = (scanNumber - 30 >= 4) ? 1 : .4;
+        logoImage5.alpha = (scanNumber - 30 >= 5) ? 1 : .4;
+        logoImage6.alpha = (scanNumber - 30 >= 6) ? 1 : .4;
+        logoImage7.alpha = (scanNumber - 30 >= 7) ? 1 : .4;
+        logoImage8.alpha = (scanNumber - 30 >= 8) ? 1 : .4;
+        logoImage9.alpha = (scanNumber - 30 >= 9) ? 1 : .4;
+        logoImage10.alpha = (scanNumber - 30 >= 10) ? 1 : .4;
+    }else if (scanNumber > 40 && scanNumber  < 51) {
+        logoImage1.alpha = (scanNumber - 40 >= 1) ? 1 : .4;
+        logoImage2.alpha = (scanNumber - 40 >= 2) ? 1 : .4;
+        logoImage3.alpha = (scanNumber - 40 >= 3) ? 1 : .4;
+        logoImage4.alpha = (scanNumber - 40 >= 4) ? 1 : .4;
+        logoImage5.alpha = (scanNumber - 40 >= 5) ? 1 : .4;
+        logoImage6.alpha = (scanNumber - 40 >= 6) ? 1 : .4;
+        logoImage7.alpha = (scanNumber - 40 >= 7) ? 1 : .4;
+        logoImage8.alpha = (scanNumber - 40 >= 8) ? 1 : .4;
+        logoImage9.alpha = (scanNumber - 40 >= 9) ? 1 : .4;
+        logoImage10.alpha = (scanNumber - 40 >= 10) ? 1 : .4;
+    }
+
     //change coupon image to yellow one if ten scans
-    couponImage.image = (scanNumber == 10) ? yellowImage : greyImage;
-    couponImage.alpha = 1.f;
-    
+    couponImage.image = (scanNumber >= 10) ? yellowImage : greyImage;    
     //unhide button if ten scans
-    couponBtn.hidden = (scanNumber == 10) ? NO : YES;
+    couponBtn.hidden = (scanNumber >= 10) ? NO : YES;
     
 }
 
@@ -143,17 +181,32 @@
         result = symbol.data;
         break;
     }
-    if ([result isEqualToString:@"cartridge bought!"])
-    {
-        //add all the punches stuff.
-        //update number of punches
-        scanNumber++;
-        NSLog(@"punches:%i", scanNumber);
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid QR Code" message:@"sorry try again" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-        [alert show];
-    }
 
+    //check if qr code matches and change scannumber accordingly
+    scanNumber = ([result isEqualToString:@"1 cartridge bought!"]) ? scanNumber + 1 :scanNumber;
+    scanNumber = ([result isEqualToString:@"2 cartridge bought!"]) ? scanNumber + 2 :scanNumber;
+    scanNumber = ([result isEqualToString:@"3 cartridge bought!"]) ? scanNumber + 3 :scanNumber;
+    scanNumber = ([result isEqualToString:@"4 cartridge bought!"]) ? scanNumber + 4 :scanNumber;
+    scanNumber = ([result isEqualToString:@"5 cartridge bought!"]) ? scanNumber + 5 :scanNumber;
+    scanNumber = ([result isEqualToString:@"6 cartridge bought!"]) ? scanNumber + 6 :scanNumber;
+    scanNumber = ([result isEqualToString:@"7 cartridge bought!"]) ? scanNumber + 7 :scanNumber;
+    scanNumber = ([result isEqualToString:@"8 cartridge bought!"]) ? scanNumber + 8 :scanNumber;
+    scanNumber = ([result isEqualToString:@"9 cartridge bought!"]) ? scanNumber + 9 :scanNumber;
+    scanNumber = ([result isEqualToString:@"10 cartridge bought!"]) ? scanNumber + 10 :scanNumber;
+    BOOL validQR;
+    validQR = NO;
+    for (int i = 1; i <= 10; i++)
+    {
+        NSString *alertString = [NSString stringWithFormat:@"%i cartridge bought!", i];
+        if ([result isEqualToString: alertString])
+        {
+            validQR = YES;
+        }
+    }
+    if (validQR == NO)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid QR Code" message:@"sorry try again" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [alert show];    }
     //Dismiss the reader
     [self dismissViewControllerAnimated:YES completion:NO];
     //add punch
@@ -233,7 +286,7 @@
 #pragma mark NSNotification
 -(void)makeCounterZero:(NSNotification *)notification
 {
-    scanNumber = 0;
+    scanNumber = scanNumber - 10;
     //check logos and stuff
     [self checkLogos];
 }

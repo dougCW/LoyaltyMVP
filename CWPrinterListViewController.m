@@ -159,6 +159,11 @@
         UILabel *modelLabel = (UILabel *)viewForModelLabel;
         modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
         modelLabel.text = [NSString stringWithFormat:@"%@", cellPrinter.name];
+        
+//        UIButton *deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        deleteBtn.center = CGPointMake(cell.frame.size.width * .8, cell.frame.size.height * .5);
+//        deleteBtn.titleLabel.text = @"X";
+//        [cell addSubview:deleteBtn];
     }
     if (usePrinter == NO)
     {

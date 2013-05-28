@@ -30,7 +30,7 @@
     
     //change navbar button colors
     //[[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:.8 green:.7 blue:.5 alpha:.3]];
-    [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:.8 green:.7 blue:.5 alpha:.02]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:50/255.0f green:75/255.0f blue:136/255.0f alpha:.5f]];
 
     
     //add cartirdgeworld blue color to buttons

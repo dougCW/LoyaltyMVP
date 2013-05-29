@@ -63,6 +63,7 @@
     
     //reload tableview
     [self.tableView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -152,26 +153,23 @@
         //Populate all cells with data
         UIView *viewForBrandLabel = [cell viewWithTag:100];
         UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
+        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
         brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
         
         UIView *viewForModelLabel = [cell viewWithTag:101];
         UILabel *modelLabel = (UILabel *)viewForModelLabel;
         modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
         modelLabel.text = [NSString stringWithFormat:@"%@", cellPrinter.name];
-        
-//        UIButton *deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        deleteBtn.center = CGPointMake(cell.frame.size.width * .8, cell.frame.size.height * .5);
-//        deleteBtn.titleLabel.text = @"X";
-//        [cell addSubview:deleteBtn];
+        modelLabel.hidden = NO;
     }
+    
     if (usePrinter == NO)
     {
         //populate first cell to say add by clicking plus btn
         UIView *viewForBrandLabel = [cell viewWithTag:100];
         UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-        brandLabel.center = cell.center;
-        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:12];
+        //brandLabel.center = cell.center;
+        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
         brandLabel.text = @"Add printers by pressing + on top right";
         
         //hide second label

@@ -43,6 +43,8 @@
 		D89FBAA3174E9584008605C8 /* Punches.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FBAA2174E9584008605C8 /* Punches.m */; };
 		D89FBAA7174FCD5B008605C8 /* CWRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */; };
 		D8B49CFC175406E100532ABA /* CWWebPage.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B49CFB175406E100532ABA /* CWWebPage.png */; };
+		D8B49D001756760800532ABA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B49CFF1756760800532ABA /* AudioToolbox.framework */; };
+		D8B49D021756783B00532ABA /* holePunch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B49D011756783B00532ABA /* holePunch.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		D89FBAA5174FCD5A008605C8 /* CWRedeemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRedeemViewController.h; sourceTree = "<group>"; };
 		D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRedeemViewController.m; sourceTree = "<group>"; };
 		D8B49CFB175406E100532ABA /* CWWebPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWWebPage.png; path = ../CWWebPage.png; sourceTree = "<group>"; };
+		D8B49CFF1756760800532ABA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D8B49D011756783B00532ABA /* holePunch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = holePunch.mp3; path = ../../holePunch.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B49D001756760800532ABA /* AudioToolbox.framework in Frameworks */,
 				D89FBA95174D6868008605C8 /* QuartzCore.framework in Frameworks */,
 				D89FBA66174D5D06008605C8 /* libiconv.dylib in Frameworks */,
 				D89FBA64174D5CF4008605C8 /* AVFoundation.framework in Frameworks */,
@@ -140,6 +145,7 @@
 		D8162FC61746A13F0059D805 = {
 			isa = PBXGroup;
 			children = (
+				D8B49D011756783B00532ABA /* holePunch.mp3 */,
 				D89FBA6E174D6505008605C8 /* ZBarSDK */,
 				D8162FDA1746A13F0059D805 /* CartrideWorldLoyalty */,
 				D8162FD11746A13F0059D805 /* Frameworks */,
@@ -158,6 +164,7 @@
 		D8162FD11746A13F0059D805 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8B49CFF1756760800532ABA /* AudioToolbox.framework */,
 				D89FBA94174D6868008605C8 /* QuartzCore.framework */,
 				D89FBA63174D5CF4008605C8 /* AVFoundation.framework */,
 				D89FBA61174D5CEA008605C8 /* CoreMedia.framework */,
@@ -368,6 +375,7 @@
 				D89FBA8F174D6505008605C8 /* zbar-helpicons.png in Resources */,
 				D89FBA90174D6505008605C8 /* zbar-samples.png in Resources */,
 				D8B49CFC175406E100532ABA /* CWWebPage.png in Resources */,
+				D8B49D021756783B00532ABA /* holePunch.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

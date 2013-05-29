@@ -9,6 +9,7 @@
 #import "CWLoyaltyViewController.h"
 #import "CWAppDelegate.h"
 #import "Punches.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface CWLoyaltyViewController ()
 {
@@ -152,6 +153,8 @@
     reader.supportedOrientationsMask = ZBarOrientationMask(UIInterfaceOrientationPortrait);
     //dont support video
     reader.enableCache = NO;
+    //rectangle
+    reader.tracksSymbols = YES;
     //set up scanner
     ZBarImageScanner *scanner = reader.scanner;
     //Configure the reader.
@@ -206,7 +209,17 @@
     if (validQR == NO)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid QR Code" message:@"sorry try again" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-        [alert show];    }
+        [alert show];
+    } else if (validQR == YES) {
+        //play sound
+        NSString *effectTitle = @"holePunch";
+        SystemSoundID soundID;
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:effectTitle ofType:@"mp3"];
+        NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+        
+        AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundURL), &soundID);
+        AudioServicesPlaySystemSound(soundID);
+    }
     //Dismiss the reader
     [self dismissViewControllerAnimated:YES completion:NO];
     //add punch
@@ -289,6 +302,7 @@
     scanNumber = scanNumber - 10;
     //check logos and stuff
     [self checkLogos];
+    [self updatePunches:punchSaved withInt:scanNumber];
 }
 
 @end

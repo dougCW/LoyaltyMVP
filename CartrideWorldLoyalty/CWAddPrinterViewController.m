@@ -46,7 +46,7 @@
     brandTextField.inputView = pickerView;
     
     //set up array
-    brandArray = [[NSMutableArray alloc] initWithObjects:@"Brother", @"Canon", @"Dell", @"Epson", @"HP", @"Kodak", @"Konica Minolta", @"Lexmark", @"Oki", @"Panasonic", @"Samsung", @"Sharp", @"Xerox", @"Other", nil];
+    brandArray = [[NSMutableArray alloc] initWithObjects:@"", @"Brother", @"Canon", @"Dell", @"Epson", @"HP", @"Kodak", @"Konica Minolta", @"Lexmark", @"Oki", @"Panasonic", @"Samsung", @"Sharp", @"Xerox", @"Other", nil];
    
     //set delegates
     modelTextField.delegate = self;

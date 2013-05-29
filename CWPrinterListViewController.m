@@ -153,13 +153,13 @@
         //Populate all cells with data
         UIView *viewForBrandLabel = [cell viewWithTag:100];
         UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
+        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
         brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
         
         UIView *viewForModelLabel = [cell viewWithTag:101];
         UILabel *modelLabel = (UILabel *)viewForModelLabel;
-        modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:10];
-        modelLabel.text = [NSString stringWithFormat:@"%@", cellPrinter.name];
+        modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
+        modelLabel.text = [NSString stringWithFormat:@"Notes: %@", cellPrinter.name];
         modelLabel.hidden = NO;
     }
     

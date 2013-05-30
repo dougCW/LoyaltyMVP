@@ -529,13 +529,17 @@ Valid at participating stores only.</mutableString>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printer Notes:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjT-de-JjC">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="YZ1-cd-zL6"/>
+                                    <constraint firstAttribute="width" constant="142" id="Yz9-47-qaI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Ld-Lk-EGu">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="McI-Dx-5bt"/>
+                                    <constraint firstAttribute="height" constant="30" id="sCV-kx-PFu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -549,17 +553,24 @@ Valid at participating stores only.</mutableString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Printer Model:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8D0-xB-ZVn">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="157-Nv-LTt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="We5-lP-W5u">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vkb-Eb-WTH"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoT-qa-cO4">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3xZ-md-fB3"/>
                                     <constraint firstAttribute="height" constant="55" id="Ktu-hM-NEN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -575,32 +586,36 @@ Valid at participating stores only.</mutableString>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39A-gw-pxN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="NKU-Bv-XKo"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q2J-MV-eBS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qoT-qa-cO4" firstAttribute="leading" secondItem="8D0-xB-ZVn" secondAttribute="leading" type="default" id="945-OF-Ab6"/>
+                            <constraint firstItem="39A-gw-pxN" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="15" id="05s-e9-Aeh"/>
+                            <constraint firstItem="39A-gw-pxN" firstAttribute="centerY" secondItem="ohi-sJ-VzE" secondAttribute="centerY" type="default" id="63u-7j-btj"/>
+                            <constraint firstItem="BjT-de-JjC" firstAttribute="baseline" secondItem="3Ld-Lk-EGu" secondAttribute="baseline" type="default" id="8Dg-41-DV6"/>
                             <constraint firstItem="qoT-qa-cO4" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="143" id="A9f-tC-1V2"/>
-                            <constraint firstItem="BjT-de-JjC" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="97" id="CbF-nO-WpP"/>
-                            <constraint firstItem="8D0-xB-ZVn" firstAttribute="leading" secondItem="g8k-GN-RbA" secondAttribute="leading" constant="35" id="Fmo-kQ-QUE"/>
+                            <constraint firstItem="8D0-xB-ZVn" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="58" id="DrC-2C-OAN"/>
+                            <constraint firstItem="We5-lP-W5u" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="54" id="H6U-Z3-Gmb"/>
                             <constraint firstItem="39A-gw-pxN" firstAttribute="leading" secondItem="ohi-sJ-VzE" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="IBr-xJ-YHT"/>
+                            <constraint firstItem="3Ld-Lk-EGu" firstAttribute="top" secondItem="We5-lP-W5u" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="K4x-e3-Qkj"/>
+                            <constraint firstItem="BjT-de-JjC" firstAttribute="leading" secondItem="qoT-qa-cO4" secondAttribute="leading" type="default" id="K7U-f3-LAW"/>
                             <constraint firstItem="We5-lP-W5u" firstAttribute="trailing" secondItem="39A-gw-pxN" secondAttribute="trailing" type="default" id="KP9-yj-NuX"/>
-                            <constraint firstItem="39A-gw-pxN" firstAttribute="bottom" secondItem="ohi-sJ-VzE" secondAttribute="bottom" type="default" id="Kgz-Ks-wz5"/>
                             <constraint firstItem="3Ld-Lk-EGu" firstAttribute="leading" secondItem="We5-lP-W5u" secondAttribute="leading" type="default" id="NwE-v8-Zuq"/>
                             <constraint firstItem="3Ld-Lk-EGu" firstAttribute="trailing" secondItem="We5-lP-W5u" secondAttribute="trailing" type="default" id="PAR-SQ-sbU"/>
-                            <constraint firstItem="3Ld-Lk-EGu" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="93" id="R2t-Bs-0ll"/>
-                            <constraint firstItem="We5-lP-W5u" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="49" id="Rxs-Bp-vSX"/>
                             <constraint firstItem="We5-lP-W5u" firstAttribute="baseline" secondItem="8D0-xB-ZVn" secondAttribute="baseline" type="default" id="VS1-in-S82"/>
-                            <constraint firstItem="We5-lP-W5u" firstAttribute="top" secondItem="39A-gw-pxN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Y5j-KU-ILV"/>
+                            <constraint firstItem="BjT-de-JjC" firstAttribute="leading" secondItem="8D0-xB-ZVn" secondAttribute="leading" type="default" id="ZoA-1k-5Oa"/>
                             <constraint firstItem="8D0-xB-ZVn" firstAttribute="leading" secondItem="ohi-sJ-VzE" secondAttribute="leading" type="default" id="d4X-hh-jnX"/>
                             <constraint firstItem="ohi-sJ-VzE" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="dUn-GG-co7"/>
-                            <constraint firstItem="ohi-sJ-VzE" firstAttribute="baseline" secondItem="39A-gw-pxN" secondAttribute="baseline" type="default" id="kko-PM-yd0"/>
-                            <constraint firstItem="We5-lP-W5u" firstAttribute="bottom" secondItem="8D0-xB-ZVn" secondAttribute="bottom" type="default" id="njx-G7-Z9k"/>
+                            <constraint firstItem="We5-lP-W5u" firstAttribute="leading" secondItem="8D0-xB-ZVn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eau-3q-qvM"/>
                             <constraint firstItem="qoT-qa-cO4" firstAttribute="centerX" secondItem="g8k-GN-RbA" secondAttribute="centerX" type="default" id="sZj-rX-isT"/>
-                            <constraint firstItem="8D0-xB-ZVn" firstAttribute="centerX" secondItem="BjT-de-JjC" secondAttribute="centerX" type="default" id="x7h-2M-C12"/>
                             <constraint firstItem="We5-lP-W5u" firstAttribute="leading" secondItem="39A-gw-pxN" secondAttribute="leading" type="default" id="yhK-fO-pqE"/>
+                            <constraint firstItem="BjT-de-JjC" firstAttribute="top" secondItem="g8k-GN-RbA" secondAttribute="top" constant="96" id="zHd-WX-siE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ukH-zS-1bz"/>
@@ -701,6 +716,86 @@ Valid at participating stores only.</mutableString>
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
+    <classes>
+        <class className="CWAddPrinterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="addPrinterBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="brandTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CWCongratulationsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWCongratulationsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="redeemBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWHomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="freqFillerBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myPrintersBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="websiteBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWLoyaltyViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="couponBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
+                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="couponBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="punchBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="viewSecondLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewThirdLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="viewToChangeColors" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewTopLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CWPrinterListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CWRedeemViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWRedeemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="redeemBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="codeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="redeemPrinterBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="CWWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="backButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

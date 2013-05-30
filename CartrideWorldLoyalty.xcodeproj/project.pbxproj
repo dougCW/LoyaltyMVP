@@ -49,6 +49,8 @@
 		D8B49D191756A32400532ABA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B49D151756A32400532ABA /* Icon.png */; };
 		D8B49D1A1756A32400532ABA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8B49D161756A32400532ABA /* Icon@2x.png */; };
 		D8B49D1C1756A5CB00532ABA /* holePunch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B49D1B1756A5CB00532ABA /* holePunch.mp3 */; };
+		D8B49D1E1756CFBE00532ABA /* buzzer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8B49D1D1756CFBE00532ABA /* buzzer.mp3 */; };
+		D8B49D231756E28400532ABA /* CWCongratulationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B49D221756E28400532ABA /* CWCongratulationsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,9 @@
 		D8B49D151756A32400532ABA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		D8B49D161756A32400532ABA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		D8B49D1B1756A5CB00532ABA /* holePunch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = holePunch.mp3; path = ../holePunch.mp3; sourceTree = "<group>"; };
+		D8B49D1D1756CFBE00532ABA /* buzzer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = buzzer.mp3; path = ../buzzer.mp3; sourceTree = "<group>"; };
+		D8B49D211756E28300532ABA /* CWCongratulationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCongratulationsViewController.h; sourceTree = "<group>"; };
+		D8B49D221756E28400532ABA /* CWCongratulationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCongratulationsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +206,7 @@
 		D8162FDB1746A13F0059D805 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8B49D1D1756CFBE00532ABA /* buzzer.mp3 */,
 				D8B49D1B1756A5CB00532ABA /* holePunch.mp3 */,
 				D8B49D131756A32300532ABA /* Icon-Small.png */,
 				D8B49D141756A32400532ABA /* Icon-Small@2x.png */,
@@ -226,6 +232,8 @@
 		D81630091746A46B0059D805 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8B49D211756E28300532ABA /* CWCongratulationsViewController.h */,
+				D8B49D221756E28400532ABA /* CWCongratulationsViewController.m */,
 				D89FBAA5174FCD5A008605C8 /* CWRedeemViewController.h */,
 				D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */,
 				D816300A1746A4AE0059D805 /* CWPrinterListViewController.h */,
@@ -392,6 +400,7 @@
 				D8B49D191756A32400532ABA /* Icon.png in Resources */,
 				D8B49D1A1756A32400532ABA /* Icon@2x.png in Resources */,
 				D8B49D1C1756A5CB00532ABA /* holePunch.mp3 in Resources */,
+				D8B49D1E1756CFBE00532ABA /* buzzer.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +422,7 @@
 				D89FBA9E174E85C5008605C8 /* CWPrinters.m in Sources */,
 				D89FBAA3174E9584008605C8 /* Punches.m in Sources */,
 				D89FBAA7174FCD5B008605C8 /* CWRedeemViewController.m in Sources */,
+				D8B49D231756E28400532ABA /* CWCongratulationsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

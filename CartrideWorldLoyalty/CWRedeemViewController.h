@@ -10,6 +10,7 @@
 
 @interface CWRedeemViewController : UIViewController <UITextFieldDelegate>
 {
+    __weak IBOutlet UIButton *redeemPrinterBtn;
     __weak IBOutlet UITextField *codeTextField;
 }
 - (IBAction)redeemBtn:(UIButton *)sender;

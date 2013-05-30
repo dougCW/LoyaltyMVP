@@ -16,6 +16,7 @@
     NSArray *myPrinterArray;
     CWAddPrinterViewController *vc;
     BOOL usePrinter;
+    CWPrinters *printerToEdit;
 }
 
 @end
@@ -126,7 +127,7 @@
     // Return the number of rows in the section.
     if (usePrinter == YES)
     {
-        return myPrinterArray.count;
+        return myPrinterArray.count + 1;
     } else {
         return 1;
     }
@@ -147,20 +148,36 @@
     //fill with printer stuff if array has stuff
     if (usePrinter == YES)
     {
-        //get the printer for the row
-        CWPrinters *cellPrinter = [myPrinterArray objectAtIndex:indexPath.row];
-        
-        //Populate all cells with data
-        UIView *viewForBrandLabel = [cell viewWithTag:100];
-        UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
-        brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
-        
-        UIView *viewForModelLabel = [cell viewWithTag:101];
-        UILabel *modelLabel = (UILabel *)viewForModelLabel;
-        modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
-        modelLabel.text = [NSString stringWithFormat:@"Notes: %@", cellPrinter.name];
-        modelLabel.hidden = NO;
+        if (indexPath.row == myPrinterArray.count)
+        {
+            //add delete advice to last cell
+            UIView *viewForBrandLabel = [cell viewWithTag:100];
+            UILabel *brandLabel = (UILabel *) viewForBrandLabel;
+            //brandLabel.center = cell.center;
+            brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+            brandLabel.text = @"Delete printers by swiping left";
+            
+            //hide second label
+            UIView *viewForModelLabel = [cell viewWithTag:101];
+            UILabel *modelLabel = (UILabel *)viewForModelLabel;
+            modelLabel.hidden = YES;
+        } else {
+            //get the printer for the row
+            CWPrinters *cellPrinter = [myPrinterArray objectAtIndex:indexPath.row];
+            
+            //Populate all cells with data
+            UIView *viewForBrandLabel = [cell viewWithTag:100];
+            UILabel *brandLabel = (UILabel *) viewForBrandLabel;
+            brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+            brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
+            
+            UIView *viewForModelLabel = [cell viewWithTag:101];
+            UILabel *modelLabel = (UILabel *)viewForModelLabel;
+            modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
+            modelLabel.text = [NSString stringWithFormat:@"Notes: %@", cellPrinter.name];
+            modelLabel.hidden = NO;
+
+        }
     }
     
     if (usePrinter == NO)
@@ -209,7 +226,7 @@
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         //reload tableview
-        [tableView reloadData];
+        [self viewDidAppear:YES];
     }
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -217,27 +234,14 @@
 }
 
 
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    if (indexPath.row <= myPrinterArray.count -1)
+    {
+        //grab info from cell
+        printerToEdit = [myPrinterArray objectAtIndex:indexPath.row];
+    }
+
     //deselect the row
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
@@ -269,4 +273,5 @@
     [self.tableView reloadData];
 }
 */
+
 @end

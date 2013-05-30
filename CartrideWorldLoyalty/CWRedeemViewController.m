@@ -8,6 +8,7 @@
 
 #import "CWRedeemViewController.h"
 #import "CWLoyaltyViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CWRedeemViewController ()
 
@@ -28,6 +29,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //keep text field keyboard up
+    [codeTextField becomeFirstResponder];
+    
+    //set up rounded corners on btn
+    [redeemPrinterBtn.layer setCornerRadius:8.0f];
+    [redeemPrinterBtn.layer setMasksToBounds:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,7 +48,8 @@
 // Use this code to dismiss a Number Pad when the user touches the background
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [codeTextField resignFirstResponder];
+    //uncomment this if you want the keyboard to go down
+    //[codeTextField resignFirstResponder];
 }
 
 //allow only 5 numbers to be typed - NOT HITTING!!!!

@@ -10,7 +10,9 @@
 
 @interface CWHomeScreenViewController : UIViewController
 {
-
+    __weak IBOutlet UIButton *freqFillerBtn;
+    __weak IBOutlet UIButton *myPrintersBtn;
+    __weak IBOutlet UIButton *websiteBtn;
 }
 - (IBAction)freqFillerCardBtn:(UIButton *)sender;
 - (IBAction)myPrintersBtn:(UIButton *)sender;

@@ -9,6 +9,7 @@
 #import "CWAddPrinterViewController.h"
 #import "CWAppDelegate.h"
 #import "CWPrinters.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface CWAddPrinterViewController ()
@@ -59,6 +60,10 @@
     //add cartirdgeworld blue color to buttons
     UIColor *cartBlue = [UIColor colorWithRed:50/255.0f green:75/255.0f blue:136/255.0f alpha:1];
     addPrinterBtn.backgroundColor = cartBlue;
+    
+    //set up rounded corners on btn
+    [addPrinterBtn.layer setCornerRadius:8.0f];
+    [addPrinterBtn.layer setMasksToBounds:YES];
 
 }
 
@@ -131,4 +136,5 @@
    // [nameTextField resignFirstResponder];
     return YES;
 }
+
 @end

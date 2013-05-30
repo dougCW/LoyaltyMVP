@@ -82,6 +82,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j99-3k-nh5"/>
+                    <connections>
+                        <outlet property="freqFillerBtn" destination="y9I-xq-IZ5" id="JVL-dS-Sas"/>
+                        <outlet property="myPrintersBtn" destination="CRl-lH-fdz" id="w76-vZ-S5u"/>
+                        <outlet property="websiteBtn" destination="tgW-6B-FBA" id="hsQ-eH-A8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGE-f4-0AU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -205,16 +210,17 @@
                         <outlet property="logoImage7" destination="CMN-EG-3lB" id="FlN-rS-0pP"/>
                         <outlet property="logoImage8" destination="FKp-2P-pgo" id="1Z5-tZ-UuU"/>
                         <outlet property="logoImage9" destination="lSs-c9-UGI" id="1yd-aw-BoD"/>
+                        <outlet property="punchBtn" destination="92k-sj-ExJ" id="NiN-Ut-OnC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J43-9W-W09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="-803"/>
         </scene>
-        <!--View Controller-->
+        <!--Congratulations View Controller-->
         <scene sceneID="flt-cR-FxO">
             <objects>
-                <viewController id="1wH-Xt-CCA" sceneMemberID="viewController">
+                <viewController id="1wH-Xt-CCA" customClass="CWCongratulationsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5sz-hE-8tX">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -287,6 +293,9 @@
                             <constraint firstAttribute="bottom" secondItem="S7g-8I-hQQ" secondAttribute="bottom" constant="111" id="zjS-Hj-6C4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="redeemBtn" destination="S7g-8I-hQQ" id="chE-a0-hYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lzn-Th-h3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,6 +369,7 @@
                     <navigationItem key="navigationItem" id="RhS-s3-s2W"/>
                     <connections>
                         <outlet property="codeTextField" destination="KJd-hl-Ord" id="xvT-s4-vmd"/>
+                        <outlet property="redeemPrinterBtn" destination="DQe-cS-5hu" id="muI-Lk-zTu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqc-YE-n5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,6 +665,12 @@ Valid at participating stores only.</mutableString>
                 <relationship kind="outlet" name="brandTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CWCongratulationsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWCongratulationsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="redeemBtn" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="CWHomeScreenViewController" superclassName="UIViewController">

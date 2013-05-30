@@ -207,30 +207,32 @@
     return YES;
 }
 
-
-
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        //get the object that will be deleted
-        CWPrinters *printer = [myPrinterArray objectAtIndex:[indexPath row]];
-        
-        //delete it from the database
-        [self deletePrinter:printer];
-        
-        //update our tableview array of data to reflect the new change
-        myPrinterArray = [self getSavedPrinters];
-        
-        //remove the cell from view
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
-        //reload tableview
-        [self viewDidAppear:YES];
+    if (myPrinterArray.count == indexPath.row)
+    {
+    } else {
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            //get the object that will be deleted
+            CWPrinters *printer = [myPrinterArray objectAtIndex:[indexPath row]];
+            
+            //delete it from the database
+            [self deletePrinter:printer];
+            
+            //update our tableview array of data to reflect the new change
+            myPrinterArray = [self getSavedPrinters];
+            
+            //remove the cell from view
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            //reload tableview
+            [self viewDidAppear:YES];
+        }
+        else if (editingStyle == UITableViewCellEditingStyleInsert) {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }   
     }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
 }
 
 

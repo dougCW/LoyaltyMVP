@@ -128,70 +128,111 @@
                                     <action selector="punchBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="klr-pX-Khb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZh-an-wof"/>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIO-41-yk3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-EL-Ovk">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCF-bx-lfS">
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recieve a" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lt-a2-9qg">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*FREE INKJET REFILL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-9d-3w9">
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="For every 10 punches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCP-kA-B3s">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="168" id="BEa-zS-RpS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIO-41-yk3">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="131" id="Jlv-of-ekG"/>
+                                                    <constraint firstAttribute="width" constant="225" id="ivC-Wq-Ogc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="couponBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="kWW-nj-3BV"/>
+                                                    <segue destination="1wH-Xt-CCA" kind="push" id="OP8-yV-g41"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="infoBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="AVv-4F-GCf"/>
+                                                    <segue destination="xSI-UQ-YcR" kind="push" id="oPA-ye-C5t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.38532366070000001" green="0.38532366070000001" blue="0.38532366070000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="13" id="4HM-4N-ZEs"/>
+                                            <constraint firstItem="GCP-kA-B3s" firstAttribute="top" secondItem="S7P-9d-3w9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8m4-XN-RQJ"/>
+                                            <constraint firstItem="S7P-9d-3w9" firstAttribute="top" secondItem="4lt-a2-9qg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DNt-Qi-pR9"/>
+                                            <constraint firstItem="S7P-9d-3w9" firstAttribute="leading" secondItem="sCF-bx-lfS" secondAttribute="leading" constant="19" id="G0z-4I-tmn"/>
+                                            <constraint firstItem="S7P-9d-3w9" firstAttribute="trailing" secondItem="GCP-kA-B3s" secondAttribute="trailing" type="default" id="HC1-pA-7UG"/>
+                                            <constraint firstItem="4lt-a2-9qg" firstAttribute="top" secondItem="sCF-bx-lfS" secondAttribute="top" constant="6" id="VRT-zL-BP5"/>
+                                            <constraint firstItem="Yao-eT-DX7" firstAttribute="top" secondItem="sCF-bx-lfS" secondAttribute="top" constant="8" id="Y8f-0I-xUL"/>
+                                            <constraint firstItem="S7P-9d-3w9" firstAttribute="centerX" secondItem="4lt-a2-9qg" secondAttribute="centerX" type="default" id="Zyt-lN-YvP"/>
+                                            <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="sCF-bx-lfS" secondAttribute="top" constant="-6" id="nS2-lA-ybV"/>
+                                            <constraint firstItem="HIO-41-yk3" firstAttribute="centerX" secondItem="sCF-bx-lfS" secondAttribute="centerX" type="default" id="xgZ-f3-YMb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="131" id="Jlv-of-ekG"/>
-                                    <constraint firstAttribute="width" constant="225" id="ivC-Wq-Ogc"/>
+                                    <constraint firstItem="sCF-bx-lfS" firstAttribute="centerX" secondItem="1yv-EL-Ovk" secondAttribute="centerX" type="default" id="YNo-Uc-fsZ"/>
+                                    <constraint firstItem="sCF-bx-lfS" firstAttribute="top" secondItem="1yv-EL-Ovk" secondAttribute="top" constant="5" id="Z8i-yH-Fpv"/>
+                                    <constraint firstItem="sCF-bx-lfS" firstAttribute="leading" secondItem="1yv-EL-Ovk" secondAttribute="leading" constant="5" id="giH-20-qg1"/>
+                                    <constraint firstItem="sCF-bx-lfS" firstAttribute="centerY" secondItem="1yv-EL-Ovk" secondAttribute="centerY" type="default" id="kf6-4J-P3j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="couponBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="kWW-nj-3BV"/>
-                                    <segue destination="1wH-Xt-CCA" kind="push" id="OP8-yV-g41"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yao-eT-DX7">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="infoBtn:" destination="MAB-R8-j2r" eventType="touchUpInside" id="AVv-4F-GCf"/>
-                                    <segue destination="xSI-UQ-YcR" kind="push" id="oPA-ye-C5t"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FKp-2P-pgo" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="1Ed-vP-rda"/>
-                            <constraint firstItem="92k-sj-ExJ" firstAttribute="centerX" secondItem="HIO-41-yk3" secondAttribute="centerX" type="default" id="4IM-fP-pfI"/>
+                            <constraint firstItem="MAY-fq-cAM" firstAttribute="leading" secondItem="0xm-b7-fgQ" secondAttribute="leading" type="default" id="4sC-hd-oJ4"/>
                             <constraint firstItem="BYn-45-3wj" firstAttribute="top" secondItem="RDh-rA-EjX" secondAttribute="top" type="default" id="66R-cv-r0F"/>
                             <constraint firstItem="BYn-45-3wj" firstAttribute="leading" secondItem="RDh-rA-EjX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6Va-ac-hZ3"/>
+                            <constraint firstItem="1yv-EL-Ovk" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="254" id="Asr-eH-dKT"/>
                             <constraint firstItem="FKp-2P-pgo" firstAttribute="leading" secondItem="CMN-EG-3lB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="C8F-zE-043"/>
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="top" secondItem="lSs-c9-UGI" secondAttribute="top" type="default" id="Fge-3L-VXJ"/>
                             <constraint firstItem="92k-sj-ExJ" firstAttribute="centerX" secondItem="Oyc-4m-q99" secondAttribute="centerX" type="default" id="FnT-eC-nUT"/>
+                            <constraint firstItem="1yv-EL-Ovk" firstAttribute="centerX" secondItem="FKp-2P-pgo" secondAttribute="centerX" type="default" id="H2y-V8-ClV"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="109" id="Isa-YZ-tlr"/>
                             <constraint firstItem="RDh-rA-EjX" firstAttribute="leading" secondItem="KPS-dE-IUk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bmh-dm-Tyx"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="leading" secondItem="FKp-2P-pgo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cS4-2p-VQn"/>
+                            <constraint firstItem="0xm-b7-fgQ" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="30" id="dhq-CC-NdH"/>
                             <constraint firstItem="lSs-c9-UGI" firstAttribute="top" secondItem="FKp-2P-pgo" secondAttribute="top" type="default" id="eDR-Jt-QBn"/>
                             <constraint firstItem="reY-tb-NpU" firstAttribute="top" secondItem="0xm-b7-fgQ" secondAttribute="top" type="default" id="fmv-8N-iGb"/>
-                            <constraint firstItem="MAY-fq-cAM" firstAttribute="leading" secondItem="0xm-b7-fgQ" secondAttribute="leading" type="default" id="gYT-nu-xDI"/>
-                            <constraint firstItem="0xm-b7-fgQ" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="30" id="gia-a4-HKp"/>
                             <constraint firstItem="KPS-dE-IUk" firstAttribute="leading" secondItem="reY-tb-NpU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="hA1-Nj-X9j"/>
-                            <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="CZh-an-wof" secondAttribute="top" type="default" id="hNS-E8-R1o"/>
                             <constraint firstItem="RDh-rA-EjX" firstAttribute="top" secondItem="KPS-dE-IUk" secondAttribute="top" type="default" id="iBv-ab-iB0"/>
-                            <constraint firstItem="HIO-41-yk3" firstAttribute="bottom" secondItem="CZh-an-wof" secondAttribute="bottom" type="default" id="kPa-5K-S1I"/>
+                            <constraint firstItem="1yv-EL-Ovk" firstAttribute="leading" secondItem="Oyc-4m-q99" secondAttribute="leading" constant="46" id="jsb-CX-bSy"/>
                             <constraint firstItem="reY-tb-NpU" firstAttribute="leading" secondItem="0xm-b7-fgQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="kt7-gc-3n8"/>
                             <constraint firstItem="92k-sj-ExJ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="172" id="lF2-Jz-4WB"/>
                             <constraint firstItem="reY-tb-NpU" firstAttribute="top" secondItem="KPS-dE-IUk" secondAttribute="top" type="default" id="m0n-Jy-76d"/>
-                            <constraint firstItem="CZh-an-wof" firstAttribute="trailing" secondItem="HIO-41-yk3" secondAttribute="trailing" type="default" id="m6n-i2-Rvk"/>
                             <constraint firstItem="0xm-b7-fgQ" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="41" id="n4S-AP-zmw"/>
-                            <constraint firstAttribute="trailing" secondItem="Yao-eT-DX7" secondAttribute="trailing" constant="68" id="nSI-gC-W35"/>
-                            <constraint firstAttribute="bottom" secondItem="Yao-eT-DX7" secondAttribute="bottom" constant="134" id="oGt-Hy-FoW"/>
-                            <constraint firstItem="CZh-an-wof" firstAttribute="leading" secondItem="HIO-41-yk3" secondAttribute="leading" type="default" id="oRc-tN-oxp"/>
                             <constraint firstItem="gSi-Dp-fGb" firstAttribute="leading" secondItem="lSs-c9-UGI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pgs-Q2-XfR"/>
-                            <constraint firstItem="HIO-41-yk3" firstAttribute="top" secondItem="Oyc-4m-q99" secondAttribute="top" constant="250" id="rgL-vv-wcc"/>
+                            <constraint firstAttribute="bottom" secondItem="1yv-EL-Ovk" secondAttribute="bottom" constant="32" id="thK-95-om0"/>
                             <constraint firstItem="MAY-fq-cAM" firstAttribute="top" secondItem="CMN-EG-3lB" secondAttribute="top" type="default" id="woc-r0-vIw"/>
                             <constraint firstItem="CMN-EG-3lB" firstAttribute="leading" secondItem="MAY-fq-cAM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="wqs-ev-ku1"/>
                         </constraints>
@@ -199,7 +240,6 @@
                     <navigationItem key="navigationItem" id="nFW-fa-bCP"/>
                     <connections>
                         <outlet property="couponBtn" destination="HIO-41-yk3" id="UFZ-Me-l27"/>
-                        <outlet property="couponImage" destination="CZh-an-wof" id="Igz-g2-Obh"/>
                         <outlet property="logoImage1" destination="0xm-b7-fgQ" id="7jC-Mn-Z9b"/>
                         <outlet property="logoImage10" destination="gSi-Dp-fGb" id="QQz-zZ-bha"/>
                         <outlet property="logoImage2" destination="reY-tb-NpU" id="1Eg-Ox-vst"/>
@@ -211,6 +251,10 @@
                         <outlet property="logoImage8" destination="FKp-2P-pgo" id="1Z5-tZ-UuU"/>
                         <outlet property="logoImage9" destination="lSs-c9-UGI" id="1yd-aw-BoD"/>
                         <outlet property="punchBtn" destination="92k-sj-ExJ" id="NiN-Ut-OnC"/>
+                        <outlet property="viewSecondLabel" destination="S7P-9d-3w9" id="stW-PS-XhI"/>
+                        <outlet property="viewThirdLabel" destination="GCP-kA-B3s" id="tY1-9l-iEq"/>
+                        <outlet property="viewToChangeColors" destination="sCF-bx-lfS" id="l94-Pd-nSt"/>
+                        <outlet property="viewTopLabel" destination="4lt-a2-9qg" id="XHQ-XE-NSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J43-9W-W09" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,6 +337,7 @@
                             <constraint firstAttribute="bottom" secondItem="S7g-8I-hQQ" secondAttribute="bottom" constant="111" id="zjS-Hj-6C4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zgI-9f-z0q"/>
                     <connections>
                         <outlet property="redeemBtn" destination="S7g-8I-hQQ" id="chE-a0-hYU"/>
                     </connections>
@@ -656,83 +701,6 @@ Valid at participating stores only.</mutableString>
     <resources>
         <image name="cwLogo.png" width="45" height="41"/>
     </resources>
-    <classes>
-        <class className="CWAddPrinterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWAddPrinterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addPrinterBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="addPrinterBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="brandTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="modelTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="CWCongratulationsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWCongratulationsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="redeemBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWHomeScreenViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWHomeScreenViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="freqFillerCardBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="myPrintersBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="websiteBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="freqFillerBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myPrintersBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="websiteBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWLoyaltyViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWLoyaltyViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="couponBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="infoBtn:" candidateClass="UIButton"/>
-                <relationship kind="action" name="punchBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="couponBtn" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="couponImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage10" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage5" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage6" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage7" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage8" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="logoImage9" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="punchBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWPrinterListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWPrinterListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CWRedeemViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWRedeemViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="redeemBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="codeTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="redeemPrinterBtn" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="CWWebViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CWWebViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backBtn:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="backButtonOutlet" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="backgroundView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="webViewOutlet" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

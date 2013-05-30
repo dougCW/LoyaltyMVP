@@ -11,9 +11,12 @@
 
 @interface CWLoyaltyViewController : UIViewController <ZBarReaderDelegate>
 {
+    __weak IBOutlet UILabel *viewThirdLabel;
+    __weak IBOutlet UILabel *viewSecondLabel;
+    __weak IBOutlet UILabel *viewTopLabel;
+    __weak IBOutlet UIView *viewToChangeColors;
     __weak IBOutlet UIButton *punchBtn;
     __weak IBOutlet UIButton *couponBtn;
-    __weak IBOutlet UIImageView *couponImage;
     __weak IBOutlet UIImageView *logoImage1;
     __weak IBOutlet UIImageView *logoImage2;
     __weak IBOutlet UIImageView *logoImage3;

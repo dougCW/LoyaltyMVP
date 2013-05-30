@@ -27,8 +27,6 @@
 		D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630171746F0F70059D805 /* CWNavBar@2x.png */; };
 		D816301A1746F0F70059D805 /* CWNavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630181746F0F70059D805 /* CWNavbar.png */; };
 		D89FB79F174AB10D008605C8 /* cwLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FB79E174AB10D008605C8 /* cwLogo.png */; };
-		D89FB7A2174AB8C6008605C8 /* coupongrey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D89FB7A0174AB8C6008605C8 /* coupongrey.jpg */; };
-		D89FB7A3174AB8C6008605C8 /* couponYello.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D89FB7A1174AB8C6008605C8 /* couponYello.jpg */; };
 		D89FBA60174D5CDF008605C8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */; };
 		D89FBA62174D5CEA008605C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA61174D5CEA008605C8 /* CoreMedia.framework */; };
 		D89FBA64174D5CF4008605C8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA63174D5CF4008605C8 /* AVFoundation.framework */; };
@@ -83,8 +81,6 @@
 		D81630171746F0F70059D805 /* CWNavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CWNavBar@2x.png"; path = "../CWNavBar@2x.png"; sourceTree = "<group>"; };
 		D81630181746F0F70059D805 /* CWNavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWNavbar.png; path = ../CWNavbar.png; sourceTree = "<group>"; };
 		D89FB79E174AB10D008605C8 /* cwLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cwLogo.png; path = ../cwLogo.png; sourceTree = "<group>"; };
-		D89FB7A0174AB8C6008605C8 /* coupongrey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = coupongrey.jpg; path = ../coupongrey.jpg; sourceTree = "<group>"; };
-		D89FB7A1174AB8C6008605C8 /* couponYello.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = couponYello.jpg; path = ../couponYello.jpg; sourceTree = "<group>"; };
 		D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D89FBA61174D5CEA008605C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		D89FBA63174D5CF4008605C8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -212,9 +208,7 @@
 				D8B49D141756A32400532ABA /* Icon-Small@2x.png */,
 				D8B49D151756A32400532ABA /* Icon.png */,
 				D8B49D161756A32400532ABA /* Icon@2x.png */,
-				D89FB7A0174AB8C6008605C8 /* coupongrey.jpg */,
 				D8B49CFB175406E100532ABA /* CWWebPage.png */,
-				D89FB7A1174AB8C6008605C8 /* couponYello.jpg */,
 				D89FB79E174AB10D008605C8 /* cwLogo.png */,
 				D8162FDC1746A13F0059D805 /* CartrideWorldLoyalty-Info.plist */,
 				D8162FDD1746A13F0059D805 /* InfoPlist.strings */,
@@ -388,8 +382,6 @@
 				D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */,
 				D816301A1746F0F70059D805 /* CWNavbar.png in Resources */,
 				D89FB79F174AB10D008605C8 /* cwLogo.png in Resources */,
-				D89FB7A2174AB8C6008605C8 /* coupongrey.jpg in Resources */,
-				D89FB7A3174AB8C6008605C8 /* couponYello.jpg in Resources */,
 				D89FBA8D174D6505008605C8 /* zbar-back.png in Resources */,
 				D89FBA8E174D6505008605C8 /* zbar-help.html in Resources */,
 				D89FBA8F174D6505008605C8 /* zbar-helpicons.png in Resources */,

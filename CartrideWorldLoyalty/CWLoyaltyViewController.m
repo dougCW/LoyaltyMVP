@@ -48,9 +48,7 @@
     NSLog(@"punches:%i", scanNumber);
 
     //set up yellow/grey images
-    yellowImage = [UIImage imageNamed:@"couponYello.jpg"];
-    greyImage = [UIImage imageNamed:@"coupongrey.jpg"];
-    couponImage.image = greyImage;
+    [self setUpGreyCoupon];
     
     //hide coupon btn
     couponBtn.hidden = YES;
@@ -65,6 +63,31 @@
     //set up rounded corners on btn
     [punchBtn.layer setCornerRadius:8.0f];
     [punchBtn.layer setMasksToBounds:YES];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void) setUpYellowCoupon
+{
+    UIColor *cwYellow = [UIColor colorWithRed:1 green:240/255.0f blue:17/255.0f alpha:1];
+    viewToChangeColors.backgroundColor = cwYellow;
+    viewTopLabel.text = @"You have earned a";
+    viewSecondLabel.text = @"*FREE INKJET REFILL";
+    viewSecondLabel.font = [UIFont italicSystemFontOfSize:17.0f];
+    viewThirdLabel.text = @"(tap to redeem)";
+}
+
+- (void) setUpGreyCoupon
+{
+    viewToChangeColors.backgroundColor = [UIColor grayColor];
+    viewTopLabel.text = @"Recieve a";
+    viewSecondLabel.text = @"*FREE INKJET REFILL";
+    viewSecondLabel.font = [UIFont italicSystemFontOfSize:17.0f];
+    viewThirdLabel.text = @"For every 10 punches";    
 }
 
 - (void) checkLogos
@@ -130,17 +153,17 @@
     }
 
     //change coupon image to yellow one if ten scans
-    couponImage.image = (scanNumber >= 10) ? yellowImage : greyImage;    
+    if (scanNumber >= 10)
+    {
+        [self setUpYellowCoupon];
+    } else {
+        [self setUpGreyCoupon];
+    }
     //unhide button if ten scans
     couponBtn.hidden = (scanNumber >= 10) ? NO : YES;
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark QR SCAN
 

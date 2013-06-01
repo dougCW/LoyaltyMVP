@@ -32,6 +32,19 @@
     //change navbar button colors
     [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:50/255.0f green:75/255.0f blue:136/255.0f alpha:.5f]];
     
+    //center buttons
+    int navbarHeight;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+        ([UIScreen mainScreen].scale == 2.0)) {
+        // Retina display
+        navbarHeight = 88;
+    } else {
+        // non-Retina display
+        navbarHeight = 44;
+    }
+    viewWithBtns.center = CGPointMake(self.view.bounds.size.width/2, (self.view.bounds.size.height - navbarHeight)/2);
+
+    
     [freqFillerBtn.layer setCornerRadius:8.0f];
     [freqFillerBtn.layer setMasksToBounds:YES];
     //[freqFillerBtn.layer setBorderWidth:1.0f];

@@ -26,6 +26,8 @@
 		D816300F1746A8B20059D805 /* CWAddPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */; };
 		D81630191746F0F70059D805 /* CWNavBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630171746F0F70059D805 /* CWNavBar@2x.png */; };
 		D816301A1746F0F70059D805 /* CWNavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630181746F0F70059D805 /* CWNavbar.png */; };
+		D85989F01759CCAC00AAF616 /* cashRegister.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85989EF1759CCAC00AAF616 /* cashRegister.mp3 */; };
+		D85989F3175A4D1300AAF616 /* CWEditCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85989F2175A4D1300AAF616 /* CWEditCellViewController.m */; };
 		D89FB79F174AB10D008605C8 /* cwLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FB79E174AB10D008605C8 /* cwLogo.png */; };
 		D89FBA60174D5CDF008605C8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */; };
 		D89FBA62174D5CEA008605C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA61174D5CEA008605C8 /* CoreMedia.framework */; };
@@ -80,6 +82,9 @@
 		D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAddPrinterViewController.m; sourceTree = "<group>"; };
 		D81630171746F0F70059D805 /* CWNavBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CWNavBar@2x.png"; path = "../CWNavBar@2x.png"; sourceTree = "<group>"; };
 		D81630181746F0F70059D805 /* CWNavbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CWNavbar.png; path = ../CWNavbar.png; sourceTree = "<group>"; };
+		D85989EF1759CCAC00AAF616 /* cashRegister.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cashRegister.mp3; path = ../cashRegister.mp3; sourceTree = "<group>"; };
+		D85989F1175A4D1300AAF616 /* CWEditCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEditCellViewController.h; sourceTree = "<group>"; };
+		D85989F2175A4D1300AAF616 /* CWEditCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEditCellViewController.m; sourceTree = "<group>"; };
 		D89FB79E174AB10D008605C8 /* cwLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cwLogo.png; path = ../cwLogo.png; sourceTree = "<group>"; };
 		D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D89FBA61174D5CEA008605C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B49D1D1756CFBE00532ABA /* buzzer.mp3 */,
+				D85989EF1759CCAC00AAF616 /* cashRegister.mp3 */,
 				D8B49D1B1756A5CB00532ABA /* holePunch.mp3 */,
 				D8B49D131756A32300532ABA /* Icon-Small.png */,
 				D8B49D141756A32400532ABA /* Icon-Small@2x.png */,
@@ -226,22 +232,48 @@
 		D81630091746A46B0059D805 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D8B49D211756E28300532ABA /* CWCongratulationsViewController.h */,
-				D8B49D221756E28400532ABA /* CWCongratulationsViewController.m */,
-				D89FBAA5174FCD5A008605C8 /* CWRedeemViewController.h */,
-				D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */,
-				D816300A1746A4AE0059D805 /* CWPrinterListViewController.h */,
-				D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */,
-				D816300D1746A8B20059D805 /* CWAddPrinterViewController.h */,
-				D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */,
-				D81630001746A4300059D805 /* CWLoyaltyViewController.h */,
-				D81630011746A4300059D805 /* CWLoyaltyViewController.m */,
-				D81630031746A4480059D805 /* CWWebViewController.h */,
-				D81630041746A4480059D805 /* CWWebViewController.m */,
 				D8162FFD1746A1BD0059D805 /* CWHomeScreenViewController.h */,
 				D8162FFE1746A1BD0059D805 /* CWHomeScreenViewController.m */,
+				D85989F4175A4D2700AAF616 /* Loyalty */,
+				D85989F6175A4D3200AAF616 /* Printer List */,
+				D85989F8175A4D7D00AAF616 /* Website */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D85989F4175A4D2700AAF616 /* Loyalty */ = {
+			isa = PBXGroup;
+			children = (
+				D81630001746A4300059D805 /* CWLoyaltyViewController.h */,
+				D81630011746A4300059D805 /* CWLoyaltyViewController.m */,
+				D89FBAA5174FCD5A008605C8 /* CWRedeemViewController.h */,
+				D89FBAA6174FCD5B008605C8 /* CWRedeemViewController.m */,
+				D8B49D211756E28300532ABA /* CWCongratulationsViewController.h */,
+				D8B49D221756E28400532ABA /* CWCongratulationsViewController.m */,
+			);
+			name = Loyalty;
+			sourceTree = "<group>";
+		};
+		D85989F6175A4D3200AAF616 /* Printer List */ = {
+			isa = PBXGroup;
+			children = (
+				D816300D1746A8B20059D805 /* CWAddPrinterViewController.h */,
+				D816300E1746A8B20059D805 /* CWAddPrinterViewController.m */,
+				D816300A1746A4AE0059D805 /* CWPrinterListViewController.h */,
+				D816300B1746A4AE0059D805 /* CWPrinterListViewController.m */,
+				D85989F1175A4D1300AAF616 /* CWEditCellViewController.h */,
+				D85989F2175A4D1300AAF616 /* CWEditCellViewController.m */,
+			);
+			name = "Printer List";
+			sourceTree = "<group>";
+		};
+		D85989F8175A4D7D00AAF616 /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				D81630031746A4480059D805 /* CWWebViewController.h */,
+				D81630041746A4480059D805 /* CWWebViewController.m */,
+			);
+			name = Website;
 			sourceTree = "<group>";
 		};
 		D89FBA6E174D6505008605C8 /* ZBarSDK */ = {
@@ -393,6 +425,7 @@
 				D8B49D1A1756A32400532ABA /* Icon@2x.png in Resources */,
 				D8B49D1C1756A5CB00532ABA /* holePunch.mp3 in Resources */,
 				D8B49D1E1756CFBE00532ABA /* buzzer.mp3 in Resources */,
+				D85989F01759CCAC00AAF616 /* cashRegister.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +448,7 @@
 				D89FBAA3174E9584008605C8 /* Punches.m in Sources */,
 				D89FBAA7174FCD5B008605C8 /* CWRedeemViewController.m in Sources */,
 				D8B49D231756E28400532ABA /* CWCongratulationsViewController.m in Sources */,
+				D85989F3175A4D1300AAF616 /* CWEditCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 
 @interface CWHomeScreenViewController : UIViewController
 {
+    __weak IBOutlet UIView *viewWithBtns;
     __weak IBOutlet UIButton *freqFillerBtn;
     __weak IBOutlet UIButton *myPrintersBtn;
     __weak IBOutlet UIButton *websiteBtn;

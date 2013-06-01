@@ -11,6 +11,7 @@
 @interface CWCongratulationsViewController : UIViewController
 {
     
+    __weak IBOutlet UIView *viewWithElements;
     __weak IBOutlet UIButton *redeemBtn;
 }
 

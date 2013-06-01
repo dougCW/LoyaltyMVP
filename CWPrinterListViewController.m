@@ -10,13 +10,15 @@
 #import "CWPrinters.h"
 #import "CWAddPrinterViewController.h"
 #import "CWAppDelegate.h"
+#import "CWEditCellViewController.h"
 
 @interface CWPrinterListViewController ()
 {
     NSArray *myPrinterArray;
-    CWAddPrinterViewController *vc;
+    CWEditCellViewController *vc;
     BOOL usePrinter;
-    CWPrinters *printerToEdit;
+    int printerInArrayIndex;
+    BOOL deleteAdviceCellSelected;
 }
 
 @end
@@ -65,6 +67,8 @@
     //reload tableview
     [self.tableView reloadData];
 
+    //set bool
+    deleteAdviceCellSelected = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -150,17 +154,17 @@
     {
         if (indexPath.row == myPrinterArray.count)
         {
-            //add delete advice to last cell
+            //hide second label
             UIView *viewForBrandLabel = [cell viewWithTag:100];
             UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-            //brandLabel.center = cell.center;
-            brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
-            brandLabel.text = @"Delete printers by swiping left";
-            
-            //hide second label
+            brandLabel.hidden = YES;
+
+            //add delete advice to last cell
             UIView *viewForModelLabel = [cell viewWithTag:101];
             UILabel *modelLabel = (UILabel *)viewForModelLabel;
-            modelLabel.hidden = YES;
+            modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
+            modelLabel.text = @"Delete printers by swiping left";
+
         } else {
             //get the printer for the row
             CWPrinters *cellPrinter = [myPrinterArray objectAtIndex:indexPath.row];
@@ -170,6 +174,7 @@
             UILabel *brandLabel = (UILabel *) viewForBrandLabel;
             brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
             brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
+            brandLabel.hidden = NO;
             
             UIView *viewForModelLabel = [cell viewWithTag:101];
             UILabel *modelLabel = (UILabel *)viewForModelLabel;
@@ -182,17 +187,16 @@
     
     if (usePrinter == NO)
     {
-        //populate first cell to say add by clicking plus btn
+        //hide second label
         UIView *viewForBrandLabel = [cell viewWithTag:100];
         UILabel *brandLabel = (UILabel *) viewForBrandLabel;
-        //brandLabel.center = cell.center;
-        brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
-        brandLabel.text = @"Add printers by pressing + on top right";
-        
-        //hide second label
+        brandLabel.hidden = YES;
+
+        //populate first cell to say add by clicking plus btn
         UIView *viewForModelLabel = [cell viewWithTag:101];
         UILabel *modelLabel = (UILabel *)viewForModelLabel;
-        modelLabel.hidden = YES;
+        modelLabel.text = @"Add printers by pressing + on top right";
+        modelLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:14];
     }
 
 
@@ -212,6 +216,7 @@
 {
     if (myPrinterArray.count == indexPath.row)
     {
+        
     } else {
         if (editingStyle == UITableViewCellEditingStyleDelete) {
             //get the object that will be deleted
@@ -237,30 +242,55 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row <= myPrinterArray.count -1)
-    {
-        //grab info from cell
-        printerToEdit = [myPrinterArray objectAtIndex:indexPath.row];
-    }
-
+{    
     //deselect the row
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/* NOT NEEDED ANYMORE (no more delegate)
-
 #pragma mark - Segue stuff
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ListToAdd"])
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    
+    if (indexPath.row == myPrinterArray.count)
     {
-        vc = segue.destinationViewController;
-        vc.delegate = self;
+        deleteAdviceCellSelected = YES;
+    }
+    
+    if (indexPath.row != myPrinterArray.count)
+    {
+        deleteAdviceCellSelected = NO;
+    }
+    
+    if ([identifier isEqualToString:@"cellToEdit"] && deleteAdviceCellSelected == YES)
+    {
+        return NO;
+    } else {
+        return YES;
     }
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+
+    if (myPrinterArray.count > 0 && indexPath.row <= myPrinterArray.count - 1 && usePrinter == YES)
+    {
+        //grab info from cell
+        printerInArrayIndex = indexPath.row;
+    }
+    
+    if (usePrinter == YES && deleteAdviceCellSelected == NO)
+    {
+        if ([segue.identifier isEqualToString:@"cellToEdit"])
+        {
+            vc = segue.destinationViewController;
+            vc.printerIndex = printerInArrayIndex;
+        }
+    }
+    
+}
+/* NOT NEEDED ANYMORE (no more delegate)
 #pragma mark delegate action
 
 - (void) addPrinterToListPrinters:(CWPrinters *)printer

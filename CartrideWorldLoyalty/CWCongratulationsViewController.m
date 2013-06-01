@@ -28,6 +28,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    //center
+    int navbarHeight;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+        ([UIScreen mainScreen].scale == 2.0)) {
+        // Retina display
+        navbarHeight = 88;
+    } else {
+        // non-Retina display
+        navbarHeight = 44;
+    }
+    viewWithElements.center = CGPointMake(self.view.bounds.size.width/2, (self.view.bounds.size.height - navbarHeight)/2);
     
     //set up rounded corners on btn
     [redeemBtn.layer setCornerRadius:8.0f];

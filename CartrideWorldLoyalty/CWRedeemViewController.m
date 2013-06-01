@@ -9,6 +9,7 @@
 #import "CWRedeemViewController.h"
 #import "CWLoyaltyViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface CWRedeemViewController ()
 
@@ -70,10 +71,28 @@
         //post notification to guess counter in VC to change coupon stuff
         [[NSNotificationCenter defaultCenter] postNotificationName:@"redeemCoupon"
                                                             object:nil];
+        //play sound
+        NSString *effectTitle = @"cashRegister";
+        SystemSoundID soundID;
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:effectTitle ofType:@"mp3"];
+        NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+        
+        AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundURL), &soundID);
+        AudioServicesPlaySystemSound(soundID);
+        
         //go back to coupon vc
         NSArray *array = [self.navigationController viewControllers];
         [self.navigationController popToViewController:[array objectAtIndex:1] animated:YES];
     } else {
+        //play sound
+        NSString *effectTitle = @"buzzer";
+        SystemSoundID soundID;
+        NSString *soundPath = [[NSBundle mainBundle] pathForResource:effectTitle ofType:@"mp3"];
+        NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+        
+        AudioServicesCreateSystemSoundID ((CFURLRef)CFBridgingRetain(soundURL), &soundID);
+        AudioServicesPlaySystemSound(soundID);
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wrong code"
                                                         message:@"try again"
                                                        delegate:self

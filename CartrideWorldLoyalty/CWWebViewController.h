@@ -14,7 +14,7 @@
 {
     __weak IBOutlet UIView *backgroundView;
     __weak IBOutlet UIActivityIndicatorView *activityIndicator;
-        __weak IBOutlet UIWebView *webViewOutlet;
+    __weak IBOutlet UIWebView *webViewOutlet;
     __weak IBOutlet UIButton *backButtonOutlet;
 }
 - (IBAction)backBtn:(UIButton *)sender;

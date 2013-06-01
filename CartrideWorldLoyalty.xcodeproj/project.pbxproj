@@ -28,6 +28,7 @@
 		D816301A1746F0F70059D805 /* CWNavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D81630181746F0F70059D805 /* CWNavbar.png */; };
 		D85989F01759CCAC00AAF616 /* cashRegister.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85989EF1759CCAC00AAF616 /* cashRegister.mp3 */; };
 		D85989F3175A4D1300AAF616 /* CWEditCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85989F2175A4D1300AAF616 /* CWEditCellViewController.m */; };
+		D85989FE175A695200AAF616 /* CWWebPage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D85989FD175A695200AAF616 /* CWWebPage@2x.png */; };
 		D89FB79F174AB10D008605C8 /* cwLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D89FB79E174AB10D008605C8 /* cwLogo.png */; };
 		D89FBA60174D5CDF008605C8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */; };
 		D89FBA62174D5CEA008605C8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FBA61174D5CEA008605C8 /* CoreMedia.framework */; };
@@ -85,6 +86,7 @@
 		D85989EF1759CCAC00AAF616 /* cashRegister.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = cashRegister.mp3; path = ../cashRegister.mp3; sourceTree = "<group>"; };
 		D85989F1175A4D1300AAF616 /* CWEditCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEditCellViewController.h; sourceTree = "<group>"; };
 		D85989F2175A4D1300AAF616 /* CWEditCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEditCellViewController.m; sourceTree = "<group>"; };
+		D85989FD175A695200AAF616 /* CWWebPage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CWWebPage@2x.png"; sourceTree = "<group>"; };
 		D89FB79E174AB10D008605C8 /* cwLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cwLogo.png; path = ../cwLogo.png; sourceTree = "<group>"; };
 		D89FBA5F174D5CDF008605C8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D89FBA61174D5CEA008605C8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -159,6 +161,7 @@
 		D8162FC61746A13F0059D805 = {
 			isa = PBXGroup;
 			children = (
+				D85989FD175A695200AAF616 /* CWWebPage@2x.png */,
 				D89FBA6E174D6505008605C8 /* ZBarSDK */,
 				D8162FDA1746A13F0059D805 /* CartrideWorldLoyalty */,
 				D8162FD11746A13F0059D805 /* Frameworks */,
@@ -426,6 +429,7 @@
 				D8B49D1C1756A5CB00532ABA /* holePunch.mp3 in Resources */,
 				D8B49D1E1756CFBE00532ABA /* buzzer.mp3 in Resources */,
 				D85989F01759CCAC00AAF616 /* cashRegister.mp3 in Resources */,
+				D85989FE175A695200AAF616 /* CWWebPage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

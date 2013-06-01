@@ -66,7 +66,7 @@
 #pragma mark Actions
 - (IBAction)redeemBtn:(UIButton *)sender
 {
-    if ([codeTextField.text isEqualToString:@"1234"])
+    if ([codeTextField.text isEqualToString:@"0131"])
     {
         //post notification to guess counter in VC to change coupon stuff
         [[NSNotificationCenter defaultCenter] postNotificationName:@"redeemCoupon"

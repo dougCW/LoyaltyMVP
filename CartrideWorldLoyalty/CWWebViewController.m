@@ -7,6 +7,7 @@
 //
 
 #import "CWWebViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CWWebViewController ()
 {
@@ -45,6 +46,13 @@
     NSURL *url = [NSURL URLWithString:mobileURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [webViewOutlet loadRequest:urlRequest];
+    
+    //add border to butn
+    UIColor *CWBlue = [UIColor colorWithRed:50/255.0f green:75/255.0f blue:136/255.0f alpha:1];
+    [backButtonOutlet.layer setBorderWidth:1.0f];
+    [backButtonOutlet.layer setBorderColor:[CWBlue CGColor]];
+    [backButtonOutlet.layer setCornerRadius:8.0f];
+    [backButtonOutlet.layer setMasksToBounds:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,7 +100,7 @@
 
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed to load webpage"
-                                                    message:@"try again after connecting wi-fi"
+                                                    message:@"Unable to connect to internet"
                                                    delegate:self
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil, nil];

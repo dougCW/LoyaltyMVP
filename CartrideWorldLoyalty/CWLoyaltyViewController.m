@@ -18,6 +18,7 @@
     UIImage *yellowImage;
     UIImage *greyImage;
     Punches *punchSaved;
+    UIColor *CWGreen;
 }
 
 @end
@@ -51,6 +52,11 @@
     }
     viewWithElements.center = CGPointMake(self.view.bounds.size.width/2, (self.view.bounds.size.height - navbarHeight)/2);
     
+    //make cwgreen
+    CWGreen = [UIColor colorWithRed:122/255.0f green:184/255.0f blue:0 alpha:1];
+    
+    viewToHideCpnBtn.backgroundColor = [UIColor clearColor];
+    
     //pass the context
     CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
@@ -75,6 +81,13 @@
     //set up rounded corners on btn
     [punchBtn.layer setCornerRadius:8.0f];
     [punchBtn.layer setMasksToBounds:YES];
+    
+    [couponButton.layer setCornerRadius:8.0f];
+    [couponButton.layer setMasksToBounds:YES];
+    [couponButton.layer setBorderWidth:1.5f];
+    [couponButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,21 +98,24 @@
 
 - (void) setUpYellowCoupon
 {
-    UIColor *cwYellow = [UIColor colorWithRed:1 green:240/255.0f blue:17/255.0f alpha:1];
-    viewToChangeColors.backgroundColor = cwYellow;
     viewTopLabel.text = @"You have earned a";
     viewSecondLabel.text = @"*FREE INKJET REFILL";
-    viewSecondLabel.font = [UIFont italicSystemFontOfSize:17.0f];
+    viewSecondLabel.font = [UIFont italicSystemFontOfSize:22.0f];
     viewThirdLabel.text = @"(tap to redeem)";
+    couponButton.backgroundColor = CWGreen;
+    viewToHideCpnBtn.hidden = YES;
 }
 
 - (void) setUpGreyCoupon
 {
-    viewToChangeColors.backgroundColor = [UIColor grayColor];
     viewTopLabel.text = @"Recieve a";
     viewSecondLabel.text = @"*FREE INKJET REFILL";
-    viewSecondLabel.font = [UIFont italicSystemFontOfSize:17.0f];
-    viewThirdLabel.text = @"For every 10 punches";    
+    viewSecondLabel.font = [UIFont italicSystemFontOfSize:22.0f];
+    viewThirdLabel.text = @"for every 10 punches";
+    viewToHideCpnBtn.hidden = NO;
+    UIColor *CWYellow = [UIColor colorWithRed:1 green:240/255.0f blue:17/255.0f alpha:1];
+    couponButton.backgroundColor = CWYellow;
+    
 }
 
 - (void) checkLogos
@@ -286,10 +302,6 @@
     //sends to info vc
 }
 
-- (IBAction)couponBtn:(UIButton *)sender
-{
-    //sends to redeem vc
-}
 
 #pragma mark Core Data
 //Save
@@ -352,4 +364,9 @@
     [self updatePunches:punchSaved withInt:scanNumber];
 }
 
+- (void)viewDidUnload {
+    couponButton = nil;
+    viewToHideCpnBtn = nil;
+    [super viewDidUnload];
+}
 @end

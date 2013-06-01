@@ -173,7 +173,7 @@
             UIView *viewForBrandLabel = [cell viewWithTag:100];
             UILabel *brandLabel = (UILabel *) viewForBrandLabel;
             brandLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
-            brandLabel.text = [NSString stringWithFormat:@"%@, %@", cellPrinter.brand, cellPrinter.model];
+            brandLabel.text = [NSString stringWithFormat:@"%@ %@", cellPrinter.brand, cellPrinter.model];
             brandLabel.hidden = NO;
             
             UIView *viewForModelLabel = [cell viewWithTag:101];

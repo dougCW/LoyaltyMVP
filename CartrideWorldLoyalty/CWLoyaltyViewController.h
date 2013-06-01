@@ -11,11 +11,12 @@
 
 @interface CWLoyaltyViewController : UIViewController <ZBarReaderDelegate>
 {
+    __weak IBOutlet UIView *viewToHideCpnBtn;
+    IBOutlet UIView *couponButton;
     __weak IBOutlet UIView *viewWithElements;
     __weak IBOutlet UILabel *viewThirdLabel;
     __weak IBOutlet UILabel *viewSecondLabel;
     __weak IBOutlet UILabel *viewTopLabel;
-    __weak IBOutlet UIView *viewToChangeColors;
     __weak IBOutlet UIButton *punchBtn;
     __weak IBOutlet UIButton *couponBtn;
     __weak IBOutlet UIImageView *logoImage1;
@@ -31,7 +32,6 @@
 }
 - (IBAction)punchBtn:(UIButton *)sender;
 - (IBAction)infoBtn:(UIButton *)sender;
-- (IBAction)couponBtn:(UIButton *)sender;
 
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 

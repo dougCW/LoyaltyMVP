@@ -541,7 +541,7 @@
 		D8162FFB1746A13F0059D805 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: DOUGLAS MCLENNAN (938T4Z3952)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Doug McLennan (P2TZJKDQYZ)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CartrideWorldLoyalty/CartrideWorldLoyalty-Prefix.pch";
 				INFOPLIST_FILE = "CartrideWorldLoyalty/CartrideWorldLoyalty-Info.plist";

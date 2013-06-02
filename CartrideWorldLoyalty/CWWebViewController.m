@@ -105,5 +105,7 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil, nil];
     [alert show];
+    [self.view bringSubviewToFront:backButtonOutlet];
+
 }
 @end

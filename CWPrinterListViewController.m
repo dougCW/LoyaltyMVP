@@ -141,7 +141,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = nil;
-    if (SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(@"5.0")) {
+    if (SYSTEM_VERSION_LESS_THAN(@"6.0")) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     }
     

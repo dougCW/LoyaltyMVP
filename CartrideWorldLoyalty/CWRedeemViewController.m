@@ -10,12 +10,15 @@
 #import "CWLoyaltyViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "CWAppDelegate.h"
+
 
 @interface CWRedeemViewController ()
 
 @end
 
 @implementation CWRedeemViewController
+@synthesize managedObjectContext;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +36,12 @@
     
     //keep text field keyboard up
     [codeTextField becomeFirstResponder];
+    
+    //pass the context
+    CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    
+    punchesBeforeRedeem = [self getNumberOfPunches];
     
     //set up rounded corners on btn
     [redeemPrinterBtn.layer setCornerRadius:8.0f];
@@ -71,6 +80,11 @@
         //post notification to guess counter in VC to change coupon stuff
         [[NSNotificationCenter defaultCenter] postNotificationName:@"redeemCoupon"
                                                             object:nil];
+        //subtract ten punches
+        punchesBeforeRedeem = [self getNumberOfPunches];
+        [self SubtractTenPunchesFromPunchesPriorToRedeem:punchesBeforeRedeem];
+        
+        
         //play sound
         NSString *effectTitle = @"cashRegister";
         SystemSoundID soundID;
@@ -100,5 +114,61 @@
                                               otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+
+-(int) getNumberOfPunches
+{
+    //setting up the fetch
+    NSError *error;
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Punches"
+                                              inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    //if no number has been saved start one at zero otherwise grab the number of punches
+    if (fetchedObjects.count == 0)
+    {
+        punchesSaved =[self createPunchWithInt:0];
+    } else {
+        punchesSaved = [fetchedObjects objectAtIndex:0];
+    }
+    int numberOfPunches = [punchesSaved.punchNumber intValue];
+    
+    return numberOfPunches;
+}
+
+-(Punches *) createPunchWithInt: (int)integer
+{
+    Punches *punchToCreate = [NSEntityDescription insertNewObjectForEntityForName:@"Punches" inManagedObjectContext:managedObjectContext];
+    
+    punchToCreate.punchNumber = [NSNumber numberWithInt:integer];
+    
+    [self saveData];
+    return punchToCreate;
+}
+
+//Save
+-(void)saveData
+{
+    NSError *error;
+    if (![managedObjectContext save:&error])
+    {
+        NSLog(@"failed to save error: %@", [error userInfo]);
+    }
+}
+
+-(void)SubtractTenPunchesFromPunchesPriorToRedeem:(int)punchesPriorToRedeem
+{
+    int punchesAfterRedeem = punchesPriorToRedeem - 10;
+
+    [self updatePunches:punchesSaved withInt:punchesAfterRedeem];
+}
+
+-(void)updatePunches:(Punches *)punch withInt: (int)newNumberOfPunches
+{
+    [punch setPunchNumber:[NSNumber numberWithInt:newNumberOfPunches]];
+    
+    [self saveData];
 }
 @end

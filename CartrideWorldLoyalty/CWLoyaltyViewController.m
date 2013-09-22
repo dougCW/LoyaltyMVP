@@ -61,22 +61,14 @@
     CWAppDelegate *appDelegate = (CWAppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
     
-    //get numbr of punches
-    scanNumber = [self getNumberOfPunches];
-    NSLog(@"punches:%i", scanNumber);
-
-    //set up yellow/grey images
-    [self setUpGreyCoupon];
     
     //hide coupon btn
     couponBtn.hidden = YES;
     
-    //set up logos
-    [self checkLogos];
     
     //notification check
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(makeCounterZero:) name:@"redeemCoupon"
+                                             selector:@selector(checkLogos) name:@"redeemCoupon"
                                                object:nil];
     //set up rounded corners on btn
     [punchBtn.layer setCornerRadius:8.0f];
@@ -88,6 +80,21 @@
     [couponButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
     
     
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //get numbr of punches
+    scanNumber = [self getNumberOfPunches];
+    NSLog(@"punches:%i", scanNumber);
+    
+    //set up yellow/grey images
+    [self setUpGreyCoupon];
+    
+    //set up logos
+    [self checkLogos];
 }
 
 - (void)didReceiveMemoryWarning
